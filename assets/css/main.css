@@ -225,41 +225,66 @@ section {
     .nav-dots ul {
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se necessário */
     }
 
     .nav-dots ul li {
-        margin: 0 10px;
+        margin: 0 10px; /* Reduz a margem entre os itens */
     }
-    
 
+    /* Estilo para a bolinha sempre expandida */
     .nav-dots ul li a {
-        width: auto;  /* Deixe a largura automática */
-        height: 50px;  
-        font-size: 20px;
-        border-radius: 25px;  
-        background-color: transparent;  
-        border: 2px solid white;  
+        width: 8rem; /* Largura fixa para evitar desconfiguração */
+        height: 20px; /* Altura fixa para os itens */
+        background-color: #333;
+        border-radius: 30px; 
         display: flex;
-        align-items: center;  /* Alinha o ícone e o texto verticalmente */
-        padding: 0 10px;  /* Espaçamento ao redor do texto e ícone */
+        justify-content: center; /* Mantém o ícone à esquerda */
+        align-items: center;
+        padding: 10px; /* Ajusta o espaçamento interno */
         color: white;
-        position: relative; /* Para garantir que o texto fique na posição correta */
-        transition: background-color 0.3s; /* Transição suave ao mudar a cor de fundo */
+        text-decoration: none;
+        font-size: 18px; /* Tamanho do texto */
+        position: relative;
+        transition: none; /* Remove todas as transições de hover */
+        overflow: hidden; /* Garante que o texto não extrapole o espaço */
     }
-    /* O texto dos ícones deve aparecer sempre ao lado do ícone */
+
+    /* Texto visível sempre */
     .nav-dots ul li a::after {
         content: attr(data-section);
-        margin-left: 10px;  /* Espaçamento entre o ícone e o texto */
+        position: relative;
+        left: 2px; /* Espaço entre o ícone e o texto */
+        background-color: transparent;
         color: white;
-        font-size: 14px;
-        display: inline; /* Usar display inline para ficar ao lado do ícone */
-        opacity: 1; /* Sempre visível */
+        opacity: 1;
+        font-size: 16px; /* Tamanho do texto */
+        display: inline-block; /* Garante que o texto apareça ao lado do ícone */
+        white-space: nowrap; /* Mantém o texto em uma única linha */
     }
 
-    /* Preencher o ícone quando ativo */
+    /* Hover sem mudar o layout */
+    .nav-dots ul li a:hover {
+        background-color: #555; /* Muda apenas a cor de fundo no hover */
+        color: white; /* Garante que o texto permaneça visível */
+        padding-left: 0px;
+        width: 8rem; /* Remove qualquer expansão */
+        justify-content: center; /* Mantém o alinhamento do ícone e texto */
+    }
+
+    /* Remover a animação do ícone ao passar o mouse */
+    .nav-dots ul li a:hover i {
+        transform: none; /* Desabilita a escala do ícone */
+    }
+
+    .nav-dots ul li a:hover::after {
+        opacity: 1;
+        left: 2px; /* Remove qualquer animação de movimentação do texto */
+    }
+
+    /* Preencher o ícone quando estiver ativo */
     .nav-dots ul li a.active {
         background-color: #ff6347;
         color: white;
     }
-    
 }
