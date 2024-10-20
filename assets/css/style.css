@@ -1,0 +1,106 @@
+/*? Variáveis globais de cores e fontes */
+
+:root {
+    /* Cores */
+    --cor-primaria: #333;
+    --cor-secundaria: #10ffff86;
+    --cor-fundo: linear-gradient(135deg, #323232 10%, #000000 30%, #323232 40%, #000000 70%, #323232 80%, #000000 100%);
+    --cor-texto: white;
+    --cor-icone: rgb(165, 165, 165);
+    --cor-hover: #555;
+    --cor-active: var(--cor-secundaria);
+
+
+/*? Fontes */
+    --fonte-principal: 'Montserrat', Arial, sans-serif;
+
+    --fonte-tamanho-grande: 3.5rem;
+    --fonte-tamanho-medio: 1.5rem;
+    --fonte-tamanho-pequeno: 1.2rem;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background: var(--cor-fundo);
+}
+
+/*TODO  Nav */
+.nav-dots ul li a {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    font-size: 25px; /* ICONES */
+}
+
+.nav-dots ul li a::after {
+    color: var(--cor-texto);
+    font-size: 20px;
+}
+
+.nav-dots ul li a:hover {
+    background-color: var(--cor-active);
+}
+
+.nav-dots ul li a.active {
+    background-color: var(--cor-secundaria);
+}
+
+/*TODO Home  */
+
+#home {
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+}
+
+.text-container h1 {
+    font-size: var(--fonte-tamanho-grande);
+}
+
+.text-container p {
+    font-size: var(--fonte-tamanho-medio);
+
+}
+
+.image-description {
+    font-size: var(--fonte-tamanho-pequeno);
+    color: var(--cor-texto);
+}
+
+
+/*! Responsividade */
+
+@media (max-width: 1024px) {
+    .text-container h1 {
+        font-size: var(--fonte-tamanho-grande);
+    }
+
+    .text-container p {
+        font-size: var(--fonte-tamanho-medio);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    
+    .nav-dots {
+        background-color: var(--cor-primaria);
+    }
+
+    .nav-dots ul li a {
+        background-color: var(--cor-primaria);
+        font-size: 20px;
+        color: var(--cor-texto);
+    }
+
+    .nav-dots ul li a:hover {
+        background-color: var(--cor-hover);
+        color: var(--cor-texto);
+    }
+
+    .nav-dots ul li a.active {
+        background-color: var(--cor-active);
+        color: var( --cor-texto);
+    }
+
+
+}

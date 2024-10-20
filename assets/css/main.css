@@ -1,18 +1,16 @@
-/* Estilo para o body */
 body {
     scroll-behavior: smooth;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;  
-    background: linear-gradient(135deg, #323232 10%, #000000 30%, #323232 40%, #000000 70%, #323232 80%, #000000 100%);
     overflow-x: hidden;
     width: 100%;
     position: relative;
     box-sizing: border-box;
+
 }
 
-/* Seções */
+
 section {
     height: 100vh; 
     padding: 20px;
@@ -22,7 +20,8 @@ section {
     text-align: center;
 }
 
-/* Navegação em forma de bolinhas */
+/*TODO Nav */
+
 .nav-dots {
     position: fixed;
     left: 20px;
@@ -31,6 +30,7 @@ section {
     background-color: transparent;
     z-index: 1000;
     transition: all 0.3s ease;
+
 }
 
 .nav-dots ul {
@@ -39,26 +39,25 @@ section {
     margin: 0;
     display: flex;
     flex-direction: column;
+    
 }
 
 .nav-dots ul li {
     margin: 15px 0;
+
 }
 
-/* Estilo para a bolinha (círculo) */
+
 .nav-dots ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: #333;
     border-radius: 50%; 
     position: relative;
     transition: all 0.3s ease;
-    color: white;
     text-decoration: none;
-    font-size: 24px;
     overflow: hidden;
 }
 
@@ -66,7 +65,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Texto da seção que aparece ao passar o mouse */
+/** Texto da seção que aparece ao passar o mouse */
 .nav-dots ul li a::after {
     content: attr(data-section);
     position: absolute;
@@ -74,112 +73,121 @@ section {
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    color: white;
     padding-left: 10px;
     white-space: nowrap;
     opacity: 0;
     transition: all 0.3s ease;
-    font-size: 20px;
+
 }
 
-/* Animação ao passar o mouse */
+/** Animação ao passar o mouse */
 .nav-dots ul li a:hover {
     width: 8rem;
-    background-color: #ff6347;
     border-radius: 30px;
     justify-content: flex-start;
     padding-left: 20px;
+
 }
 
 .nav-dots ul li a:hover i {
     transform: scale(1.2);
+
 }
 
 .nav-dots ul li a:hover::after {
     opacity: 1;
-    left: 50px;
+    left: 45px; /* Espaço entre o ícone e o texto */
+
 }
 
-/* Estilo da bolinha ativa */
-.nav-dots ul li a.active {
-    background-color: #ff6347;
-}
 
-/* Home */
+/*TODO Home */
+
 #home {
     height: 100vh;
     width: 100vw; 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-align: center;
-    font-family: Arial, sans-serif;
+    text-align: flex-start;
+   
 }
 
-/* presentation Container */
+/** presentation Container */
 .presentation {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-be;
     align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px
 }
 
-/* Contêiner de texto */
+/** Contêiner de texto */
 .text-container {
     flex: 1;
     text-align: center;
-    padding-left: 50px;
+    padding-left: 6.8rem;
+    
 }
 
 .text-container h1 {
-    font-size: 3.5rem;
     margin: 0;
+
 }
 
 .text-container p {
-    font-size: 1.5rem;
     margin-top: 10px;
 }
 
-/* Contêiner de imagem */
+/** Contêiner de imagem */
 .image-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
-/* Estilo da imagem */
+/** Estilo da imagem */
 .profile-image {
-    max-width: 250px;
+    max-width: 25rem;
     width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
-/* Parágrafo abaixo da imagem */
+/** Parágrafo abaixo da imagem */
 .image-description {
-    font-size: 1.2rem;
-    color: white;
-    text-align: center;
+    text-align: justify;
 }
 
-/* Estilo responsivo */
 
-/* Para telas grandes como 1440px ou mais */
+
+
+/*! Responsividade */
+
+/*? Para telas grandes como 1440px ou mais */
 @media (min-width: 1440px) {
     .nav-dots {
-        left: 50px;
+        left: 2.5rem;
     }
+
+    .text-container {
+        margin-right: 6rem;
+        padding-left: 0.5rem;
+    }
+    
+    
+    .image-container {
+        margin-left: 9rem;
+    }
+    
 }
 
-/* Para telas entre 768px e 1024px */
+/*? Para telas entre 768px e 1024px */
 @media (max-width: 1024px) {
     .presentation {
         flex-direction: column;
@@ -195,20 +203,24 @@ section {
         padding: 0;
     }
 
-    .text-container h1 {
-        font-size: 2.5rem;
-    }
-
-    .text-container p {
-        font-size: 1.2rem;
-    }
-
     .profile-image {
-        max-width: 300px;
+        max-width: 25rem;
     }
+
+    .text-container {
+        padding-left: 50px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .image-description {
+        padding-left: 11rem;
+        padding-right: 11rem; 
+    }
+    
 }
 
-/* Para telas menores (768px ou menos) */
+/*?  Para telas menores (768px ou menos) */
 @media (max-width: 768px) {
     .nav-dots {
         position: fixed;
@@ -218,75 +230,91 @@ section {
         transform: none;
         display: flex;
         justify-content: center;
-        background-color: #333;
         padding: 10px 0;
     }
 
     .nav-dots ul {
         flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se necessário */
+        flex-wrap: wrap; 
     }
 
     .nav-dots ul li {
         margin: 0 10px; /* Reduz a margem entre os itens */
     }
 
-    /* Estilo para a bolinha sempre expandida */
+    /** Estilo para a bolinha sempre expandida */
     .nav-dots ul li a {
         width: 8rem; /* Largura fixa para evitar desconfiguração */
         height: 20px; /* Altura fixa para os itens */
-        background-color: #333;
         border-radius: 30px; 
         display: flex;
-        justify-content: center; /* Mantém o ícone à esquerda */
+        justify-content: center; 
         align-items: center;
-        padding: 10px; /* Ajusta o espaçamento interno */
-        color: white;
+        padding: 12px; /* Ajusta o espaçamento interno */
         text-decoration: none;
-        font-size: 18px; /* Tamanho do texto */
         position: relative;
         transition: none; /* Remove todas as transições de hover */
         overflow: hidden; /* Garante que o texto não extrapole o espaço */
         margin-bottom: 2px; /* Espaço entre os itens */
     }
 
-    /* Texto visível sempre */
+    /** Texto visível sempre */
     .nav-dots ul li a::after {
         content: attr(data-section);
         position: relative;
-        left: 2px; /* Espaço entre o ícone e o texto */
+        left: 0px; /* Espaço entre o ícone e o texto */
         background-color: transparent;
-        color: white;
         opacity: 1;
-        font-size: 16px; /* Tamanho do texto */
-        display: inline-block; /* Garante que o texto apareça ao lado do ícone */
-        white-space: nowrap; /* Mantém o texto em uma única linha */
+        display: inline-block;
+        white-space: nowrap; 
+
     }
 
-    /* Hover sem mudar o layout */
+    /** Hover sem mudar o layout */
     .nav-dots ul li a:hover {
-        background-color: #555; /* Muda apenas a cor de fundo no hover */
-        color: white; /* Garante que o texto permaneça visível */
         padding-left: 0px;
         width: 8rem; /* Remove qualquer expansão */
         justify-content: center; /* Mantém o alinhamento do ícone e texto */
+
     }
 
-    /* Remover a animação do ícone ao passar o mouse */
     .nav-dots ul li a:hover i {
-        transform: none; /* Desabilita a escala do ícone */
+        transform: none; /*! Desabilita a escala do ícone */
     }
 
     .nav-dots ul li a:hover::after {
         opacity: 1;
-        left: 2px; /* Remove qualquer animação de movimentação do texto */
+        left: 0px; 
     }
 
-    /* Preencher o ícone quando estiver ativo */
+    /** Preencher o ícone quando estiver ativo */
     .nav-dots ul li a.active {
-        background-color: #ff6347;
-        color: white;
         padding-left: 0;
     }
+    
+    .profile-image {
+        max-width: 20rem;
+    }
+
+    .image-description {
+        padding-left: 2rem;
+        padding-right: 2rem; 
+    }
+}
+
+/*?  Para telas menores (425px ou menos) */
+@media (max-width: 600px) {
+    .presentation {
+        margin-top: 5rem;
+    }
+
+}
+
+/*?  Para telas menores (320px ou menos) */
+@media (max-width: 320px) {
+    .presentation {
+        margin-top: 10rem;
+    }
+
 }
