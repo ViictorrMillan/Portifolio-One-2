@@ -60,6 +60,25 @@ body {
 
 }
 
+#dynamic-subtitle {
+    font-size: var(--fonte-tamanho-medio);
+    color: var(--cor-texto);
+}
+
+#dynamic-subtitle::after{
+    font-size: var(--fonte-tamanho-medio);
+    color: var(--cor-texto);
+
+}
+
+.social-icon {
+    font-size: 3rem; 
+    color: var(--cor-primaria); 
+
+}
+.social-icon:hover {
+    color: var(--cor-secundaria); /* Cor ao passar o mouse */
+}
 .image-description {
     font-size: var(--fonte-tamanho-pequeno);
     color: var(--cor-texto);

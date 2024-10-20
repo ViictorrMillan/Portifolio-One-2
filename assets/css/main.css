@@ -129,7 +129,7 @@ section {
     flex: 1;
     text-align: center;
     padding-left: 6.8rem;
-    
+    max-width: 100%;
 }
 
 .text-container h1 {
@@ -137,8 +137,30 @@ section {
 
 }
 
+
 .text-container p {
     margin-top: 10px;
+}
+
+/** Texto animado */
+#dynamic-subtitle {
+    white-space: pre-wrap; /* Permite quebra de linha quando necessário */
+
+}
+
+/** Cursor que pisca */
+#dynamic-subtitle::after {
+    content: "|";
+    font-size: 1.5rem;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+/** Animação do cursor */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /** Contêiner de imagem */
@@ -157,6 +179,17 @@ section {
     height: auto;
     border-radius: 50%;
     margin-bottom: 0px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.social-icon {
+    margin: 0 15px; /* Espaçamento entre os ícones */
+    transition: color 0.3s; /* Efeito de transição ao passar o mouse */
 }
 
 /** Parágrafo abaixo da imagem */
@@ -213,11 +246,20 @@ section {
         margin-left: 0px;
     }
 
+    #dynamic-subtitle {
+        
+        min-height: 30px; /
+    }
+
     .image-description {
         padding-left: 11rem;
         padding-right: 11rem; 
     }
     
+    .social-icons {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /*?  Para telas menores (768px ou menos) */
@@ -293,6 +335,10 @@ section {
         padding-left: 0;
     }
     
+    .presentation {
+        margin-top: 1rem;
+    }
+
     .profile-image {
         max-width: 20rem;
     }
@@ -306,7 +352,7 @@ section {
 /*?  Para telas menores (425px ou menos) */
 @media (max-width: 600px) {
     .presentation {
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
 
 }
@@ -314,7 +360,7 @@ section {
 /*?  Para telas menores (320px ou menos) */
 @media (max-width: 320px) {
     .presentation {
-        margin-top: 10rem;
+        margin-top: 12rem;
     }
 
 }
