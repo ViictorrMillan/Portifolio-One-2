@@ -73,7 +73,7 @@ body {
 
 .social-icon {
     font-size: 3rem; 
-    color: var(--cor-primaria); 
+    color: var(--cor-hover);
 
 }
 .social-icon:hover {
@@ -120,6 +120,12 @@ body {
         background-color: var(--cor-active);
         color: var( --cor-texto);
     }
+}
 
-
+@media (max-width: 600px) {
+    /*!  presentation */
+      .image-description {
+       font-size: 1.1rem;
+    
+    }
 }

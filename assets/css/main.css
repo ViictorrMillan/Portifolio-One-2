@@ -18,6 +18,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
+ 
 }
 
 /*TODO Nav */
@@ -73,7 +74,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    padding-left: 10px;
+    padding-left: 12px;
     white-space: nowrap;
     opacity: 0;
     transition: all 0.3s ease;
@@ -82,7 +83,7 @@ section {
 
 /** Animação ao passar o mouse */
 .nav-dots ul li a:hover {
-    width: 8rem;
+    width: 9rem;
     border-radius: 30px;
     justify-content: flex-start;
     padding-left: 20px;
@@ -96,7 +97,7 @@ section {
 
 .nav-dots ul li a:hover::after {
     opacity: 1;
-    left: 45px; /* Espaço entre o ícone e o texto */
+    left: 50px; /* Espaço entre o ícone e o texto */
 
 }
 
@@ -145,7 +146,6 @@ section {
 /** Texto animado */
 #dynamic-subtitle {
     white-space: pre-wrap; /* Permite quebra de linha quando necessário */
-
 }
 
 /** Cursor que pisca */
@@ -197,6 +197,93 @@ section {
     text-align: justify;
 }
 
+/*! About  */
+
+.about-section {
+    padding: 0;
+    margin-top: 8rem;
+    margin-left: 8rem;
+    text-align: center;
+}
+  
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.section-title p {
+    font-size: 2rem;
+    color: #f3f3f3;
+    margin-top: -10px;
+}
+  
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.col-left {
+    flex: 1;
+    max-width: 28rem;
+    margin-right: 6rem;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 4rem;
+}
+
+.col-right {
+    flex: 2;
+    max-width: 600px;
+    text-align: justify;
+}
+
+.col-right h3 {
+    font-size: 2.5rem; 
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.col-right p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f3f3f3;
+}
+
+/* Organizando os itens em duas colunas */
+.col-right ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.col-right ul li {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.col-right ul li strong {
+    color: #f3f3f3;
+}
 
 
 
@@ -225,6 +312,7 @@ section {
     .presentation {
         flex-direction: column;
         align-items: center;
+        margin-top: 10px;
     }
 
     .text-container {
@@ -252,13 +340,46 @@ section {
     }
 
     .image-description {
-        padding-left: 11rem;
-        padding-right: 11rem; 
+        padding-left: 12rem;
+        padding-right: 12rem; 
     }
     
     .social-icons {
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+
+    /*! About */
+    .about-section {
+        margin-top: 20rem; /* Adicionando mais espaço no topo */
+        padding: 2rem; /* Adicionando padding lateral */
+        text-align: center; /* Centralizando em telas menores */
+    }
+
+    .about-content {
+        flex-direction: column; /* Empilha imagem e texto */
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-left, .col-right {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .profile-pic {
+        width: 60%; /* Reduzindo o tamanho da imagem */
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .col-right {
+        padding: 0 2rem; /* Adicionando mais espaço nas laterais do texto */
+    }
+
+    .col-right ul {
+        grid-template-columns: 1fr; /* Única coluna em telas menores */
     }
 }
 
@@ -336,7 +457,7 @@ section {
     }
     
     .presentation {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .profile-image {
@@ -344,23 +465,130 @@ section {
     }
 
     .image-description {
+        padding-left: 8rem;
+        padding-right: 8rem; 
+    }
+
+    /*! About */
+
+     .about-section {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .section-title h2 {
+        font-size: 3rem;
+    }
+
+    .section-title p {
+        font-size: 2rem;
+    }
+
+    .col-left {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .profile-pic {
+        margin-left: 0;
+    }
+
+    .col-right {
+        max-width: 100%;
+    }
+
+    .col-right h3 {
+        font-size: 2rem;
+    }
+
+}
+
+/*? Para telas menores (600px ou menos) */
+@media (max-width: 600px) {
+    /*! Apresentação */
+    .presentation {
+        margin-top: 8rem;
+    }
+
+    .image-description {
         padding-left: 2rem;
         padding-right: 2rem; 
     }
-}
 
-/*?  Para telas menores (425px ou menos) */
-@media (max-width: 600px) {
-    .presentation {
-        margin-top: 6rem;
+    /*! Seção Sobre */
+    .about-section {
+        margin-left: 1rem; /* Reduz as margens laterais para evitar que o conteúdo "quebre" */
+        margin-right: 1rem;
     }
 
+    .section-title h2 {
+        font-size: 2.5rem; /* Diminui o tamanho do título */
+        margin: 0 1rem; /* Ajusta as margens do título para telas pequenas */
+    }
+
+    .section-title p {
+        font-size: 1.3rem; /* Ajusta o subtítulo */
+        margin: 1rem 2rem; /* Reduz as margens laterais do subtítulo */
+    }
+
+    .col-left {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .profile-pic {
+        margin: 0 auto; /* Centraliza a imagem */
+        width: 80%; /* Ajusta o tamanho da imagem para ficar proporcional */
+    }
+
+    .col-right {
+        max-width: 100%;
+    }
+
+    .col-right h3 {
+        font-size: 1.8rem; /* Ajusta o tamanho do texto do título */
+    }
+    
+    .col-right p {
+        font-size: 1rem; /* Diminui o tamanho do texto abaixo de "Victor Millan" */
+        line-height: 1.4; /* Ajuste o espaçamento entre as linhas */
+        margin: 0 1rem; /* Reduz as margens laterais para evitar quebras */
+    }
+    
+    .col-right ul li {
+        font-size: 1rem; /* Diminui o tamanho do texto da lista */
+        margin: 0 1rem; /* Ajusta margens para alinhamento e evitar quebras */
+    }
 }
 
 /*?  Para telas menores (320px ou menos) */
+/* Para telas muito pequenas (320px ou menos) */
 @media (max-width: 320px) {
     .presentation {
-        margin-top: 12rem;
+        margin-top: 18rem; /* Ajusta o espaçamento */
     }
 
+    .about-section {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .section-title p {
+        font-size: 1rem; /* Reduz o subtítulo */
+    }
+
+    .col-right p, 
+    .col-right ul li {
+        font-size: 0.8rem; /* Diminui ainda mais o tamanho do texto */
+    }
+
+    .profile-pic {
+        width: 70%; /* Diminui o tamanho da imagem para caber melhor */
+    }
 }

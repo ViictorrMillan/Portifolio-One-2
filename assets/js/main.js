@@ -2,11 +2,28 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        
+        // Calcula a altura de deslocamento para telas pequenas
+        let offset = 0;
+        if (window.innerWidth <= 1024) {
+            offset = 150;  // Ajuste esse valor para corresponder à altura do cabeçalho em telas menores
+        }
+
+        if (window.innerWidth <= 768) {
+            offset = 220;  // Ajuste esse valor para corresponder à altura do cabeçalho em telas menores
+        }
+
+        const topPosition = targetSection.offsetTop - offset;
+
+        window.scrollTo({
+            top: topPosition,
             behavior: 'smooth'
         });
     });
 });
+
 
 // Destacar a bolinha ativa com base na rolagem da página
 document.addEventListener('DOMContentLoaded', function () {
