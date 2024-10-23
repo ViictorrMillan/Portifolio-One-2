@@ -208,7 +208,6 @@ section {
   
 .section-title {
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 .section-title h2 {
@@ -223,68 +222,91 @@ section {
     margin-top: -10px;
 }
   
+/* Organização principal da seção "about-content" */
 .about-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch; /* Ajusta a altura das colunas para serem iguais */
     margin-top: 2rem;
 }
 
 .col-left {
     flex: 1;
-    max-width: 28rem;
-    margin-right: 6rem;
+    max-width: 30rem;
+    margin-right: 2rem;
 }
 
 .profile-pic {
     width: 100%;
+    height: 100%; /* Faz a imagem ocupar toda a altura disponível */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-left: 4rem;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
 }
 
+/* Coluna da direita com layout flexível */
 .col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o espaço verticalmente */
     flex: 2;
-    max-width: 600px;
+    max-width: 800px;
     text-align: justify;
+    padding: 0 4rem;
+    height: 100%; /* Garante que ocupe toda a altura da imagem */
 }
 
+/* Estilo do título, centralizado no topo */
 .col-right h3 {
-    font-size: 2.5rem; 
+    font-size: 2.5vw;
     font-weight: 600;
     text-align: center;
     color: #ffffff;
     margin-top: 0;
+    margin-bottom: 0.8rem;
+    flex-shrink: 0; /* Evita que o título encolha */
 }
 
+/* Estilo do parágrafo */
 .col-right p {
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     line-height: 1.8;
     color: #f3f3f3;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Faz com que o parágrafo cresça para preencher o espaço */
 }
 
-/* Organizando os itens em duas colunas */
+/* Organizando a lista de informações em colunas */
 .col-right ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Duas colunas */
     gap: 10px;
     list-style: none;
     padding: 0;
+    margin-top: 2rem;
 }
 
 .col-right ul li {
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
+    align-items: center;
     justify-content: flex-start;
 }
 
-.col-right ul li strong {
-    color: #f3f3f3;
+/* Email ocupa o final e as duas colunas */
+.col-right ul li:nth-child(5) {
+    grid-column: span 2; /* Ocupa as duas colunas */
+    margin-top: auto; /* Garante que o email fique no final */
 }
 
+.col-right ul li span {
+    font-weight: bold;
+    color: #f3f3f3;
+    margin-right: 5px;
+}
 
 
 /*! Responsividade */
@@ -379,8 +401,9 @@ section {
     }
 
     .col-right ul {
-        grid-template-columns: 1fr; /* Única coluna em telas menores */
+        grid-template-columns: 1fr; /* Apenas uma coluna */
     }
+    
 }
 
 /*?  Para telas menores (768px ou menos) */
