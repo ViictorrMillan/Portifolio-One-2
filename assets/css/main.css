@@ -309,6 +309,64 @@ section {
 }
 
 
+
+/*! Resume */
+.resume-section {
+    padding: 60px 0;
+    
+}
+
+.resume-title {
+    font-size: 2.5rem; /* Tamanho maior para o título */
+    font-weight: 700;
+    color: #333333;
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px;
+}
+
+.resume-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+}
+
+.resume-column {
+    width: 48%;
+}
+
+.resume-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    font-size: 1.1rem; /* Aumenta a fonte do item */
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Linha de conexão entre os itens */
+.resume-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #007bff; /* Cor da linha */
+}
+
+.resume-item::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+
+
 /*! Responsividade */
 
 /*? Para telas grandes como 1440px ou mais */
