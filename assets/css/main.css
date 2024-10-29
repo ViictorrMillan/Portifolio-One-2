@@ -204,6 +204,7 @@ section {
     margin-top: 8rem;
     margin-left: 8rem;
     text-align: center;
+    margin-bottom: 120px;
 }
   
 .section-title {
@@ -312,60 +313,165 @@ section {
 
 /*! Resume */
 .resume-section {
-    padding: 60px 0;
+    padding: 45rem 20rem 0 13rem; /* Converte o padding para rem */
+
+}
+
+/* Título das seções */
+.resume-title {
+    font-size: 2.5rem; /* Define o tamanho da fonte para o título */
+    font-weight: 700; /* Define a espessura da fonte */
+    color: #ffffff; /* Define a cor do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 0px; /* Remove espaço extra abaixo do título */
+    border-bottom: 2px solid #f4f6f8; /* Adiciona uma linha abaixo do título */
+    padding-bottom: 12px; /* Adiciona espaço abaixo do título */
+    margin-bottom: 20px; /* Adiciona espaço extra abaixo da linha */
+    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
+    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+}
+
+/* Conteúdo da seção de resumo */
+.resume-content {
+    display: flex; /* Exibe as colunas lado a lado */
+    gap: 15px; /* Define o espaço entre as colunas */
+    flex-wrap: nowrap; /* Evita que as colunas quebrem em telas menores */
+}
+
+/* Colunas de resumo */
+.resume-column {
+    width: 45%; /* Define a largura das colunas */
+    background: #333333; /* Define a cor de fundo da coluna */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+    padding: 15px 20px; /* Adiciona padding interno à coluna */
+}
+
+/* Itens do resumo */
+.resume-item {
+    position: relative; /* Define o posicionamento para os ícones de conexão */
+    padding-left: 40px; /* Espaço à esquerda para os ícones de conexão */
+    margin-bottom: 20px; /* Espaço entre os itens */
+    font-size: 1.6rem; /* Define o tamanho da fonte */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+    color: #ffffff; /* Define a cor do texto */
+    text-align: start; /* Alinha o texto à esquerda */
+}
+
+
+
+/* Subtítulo da seção de tecnologias */
+.technologies-title {
+    text-align: center; /* Centraliza o subtítulo */
+}
+
+/* Estilo para o ícone principal de seções */
+.resume-icon {
+    width: 80px; /* Define o tamanho do ícone */
+    height: auto;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinha o ícone verticalmente ao centro do texto */
+}
+
+/* Estilo específico para imagens de cursos ao lado do título */
+.course-header {
+    display: flex; /* Alinha o ícone e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    margin-bottom: 10px; /* Espaço entre o cabeçalho e o conteúdo do curso */
+}
+
+.course-icon {
+    width: 80px; /* Define o tamanho da imagem do curso */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinha o ícone ao centro do texto */
+}
+
+/* Estilo para a imagem de tecnologias */
+.technologies-image {
+    width: 100%; /* Ocupa toda a largura disponível */
+   text-align: center;
+    margin-top: 2px; /* Espaço acima da imagem */
     
 }
 
-.resume-title {
-    font-size: 2.5rem; /* Tamanho maior para o título */
-    font-weight: 700;
-    color: #333333;
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 30px;
+.resume-subtitle {
+    text-align: center;
+    font-size: 1.8rem;
 }
 
+
+/* Linha separadora menor entre cursos */
+.course-separator {
+    width: 95%; /* Define a largura da linha menor */
+    height: 2px; /* Define a espessura da linha */
+    background-color: #f4f6f8; /* Define a cor da linha */
+    margin: 20px auto; /* Centraliza a linha e adiciona espaçamento acima e abaixo */
+    border-radius: 1px; /* Bordas arredondadas para um efeito suave */
+}
+
+/* Espaçamento e estilo geral da seção */
+.resume-section {
+    padding: 350px 0px 0px 210px;
+}
+
+/* Título das seções */
+.resume-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #f4f6f8;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Conteúdo da seção de resumo */
 .resume-content {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+    gap: 15px;
+    flex-wrap: nowrap;
 }
 
+/* Colunas de resumo */
 .resume-column {
-    width: 48%;
+    width: 45%;
+    background: #333333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
 }
 
+/* Itens do resumo */
 .resume-item {
     position: relative;
     padding-left: 40px;
-    margin-bottom: 25px;
-    font-size: 1.1rem; /* Aumenta a fonte do item */
+    margin-bottom: 20px;
+    font-size: 1.6rem;
     line-height: 1.6;
-    color: #333333;
+    color: #ffffff;
+    text-align: start;
 }
 
-/* Linha de conexão entre os itens */
-.resume-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #007bff; /* Cor da linha */
+/* Estilos adicionais omitidos para clareza... */
+
+.technologies-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
 }
 
-.resume-item::after {
-    content: "";
-    position: absolute;
-    left: -6px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background-color: #007bff;
-    border-radius: 50%;
+.resume-subtitle {
+    text-align: center;
+    font-size: 2rem;
 }
 
-
+h5 {
+    text-align: center;
+}
 
 /*! Responsividade */
 
