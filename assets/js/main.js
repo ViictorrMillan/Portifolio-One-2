@@ -1,31 +1,30 @@
-// Scroll suave ao clicar nas bolinhas
+// Scroll suave ao clicar nos links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Previne o comportamento padrão do link
 
-        const targetSection = document.querySelector(this.getAttribute('href'));
-        
-        // Calcula a altura de deslocamento para telas pequenas
-        let offset = 0;
-        if (window.innerWidth <= 1024) {
-            offset = 150;  // Ajuste esse valor para corresponder à altura do cabeçalho em telas menores
+        // Seleciona a seção alvo usando o ID
+        const targetId = this.getAttribute('href'); // Mantém o "#" do href
+        const targetSection = document.querySelector(targetId); // Seleciona pela ID
+
+        if (targetSection) { // Verifica se a seção existe
+            // Calcula a altura do cabeçalho
+            const header = document.querySelector('header'); // Altere isso para o seletor do seu cabeçalho
+            const headerHeight = header ? header.offsetHeight : 0; // Verifica se o cabeçalho existe
+
+            const topPosition = targetSection.offsetTop - headerHeight; // Calcula a posição superior da seção menos a altura do cabeçalho
+
+            // Faz a rolagem suave para a posição calculada
+            window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth'
+            });
         }
-
-        if (window.innerWidth <= 768) {
-            offset = 220;  // Ajuste esse valor para corresponder à altura do cabeçalho em telas menores
-        }
-
-        const topPosition = targetSection.offsetTop - offset;
-
-        window.scrollTo({
-            top: topPosition,
-            behavior: 'smooth'
-        });
     });
 });
 
+// Destaque da secao atual 
 
-// Destacar a bolinha ativa com base na rolagem da página
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
     const navDots = document.querySelectorAll('.nav-dots ul li a');
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
                 current = section.getAttribute('id');
             }
         });
@@ -51,35 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('.nav-dots ul li a');
-
-    links.forEach(link => {
-        link.addEventListener('click', function () {
-            // Remover a classe 'active' de todos os links
-            links.forEach(link => link.classList.remove('active'));
-            // Adicionar a classe 'active' ao link clicado
-            this.classList.add('active');
-        });
-    });
-
-    // Adicionando a classe 'active' com base na seção visível
-    const sections = document.querySelectorAll('section');
-    window.addEventListener('scroll', () => {
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top >= 0 && rect.top < window.innerHeight) {
-                const id = section.getAttribute('id');
-                links.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    });
-});
 
 //! Texto Dinâmico
 

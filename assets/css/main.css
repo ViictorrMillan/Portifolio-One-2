@@ -18,7 +18,10 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
- 
+}
+
+#home, #resume, #portfolio, #contact {
+    margin-bottom: 0rem; /* Ajuste o valor conforme necessário */
 }
 
 /*TODO Nav */
@@ -312,53 +315,57 @@ section {
 
 
 /*! Resume */
-.resume-section {
-    padding: 45rem 20rem 0 13rem; /* Converte o padding para rem */
 
+#Resume {
+    margin-top: 10rem;
+    max-height: 100vh;
+}
+
+/* Espaçamento e estilo geral da seção */
+.resume-section {
+    padding: 22rem 15rem 25rem; /* Mantém o padding nas laterais */
+    /* Adiciona espaço acima para evitar sobreposição */
 }
 
 /* Título das seções */
 .resume-title {
-    font-size: 2.5rem; /* Define o tamanho da fonte para o título */
-    font-weight: 700; /* Define a espessura da fonte */
-    color: #ffffff; /* Define a cor do título */
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 0px; /* Remove espaço extra abaixo do título */
-    border-bottom: 2px solid #f4f6f8; /* Adiciona uma linha abaixo do título */
-    padding-bottom: 12px; /* Adiciona espaço abaixo do título */
-    margin-bottom: 20px; /* Adiciona espaço extra abaixo da linha */
-    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
-    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 0.125rem solid #f4f6f8;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
 }
 
 /* Conteúdo da seção de resumo */
 .resume-content {
-    display: flex; /* Exibe as colunas lado a lado */
-    gap: 15px; /* Define o espaço entre as colunas */
-    flex-wrap: nowrap; /* Evita que as colunas quebrem em telas menores */
+    display: flex;
+    gap: 2rem; /* Aumenta o espaço entre as colunas */
+    flex-wrap: wrap; /* Permite que as colunas se movam em telas menores */
+    justify-content: center; /* Centraliza as colunas horizontalmente */
 }
 
 /* Colunas de resumo */
 .resume-column {
-    width: 45%; /* Define a largura das colunas */
-    background: #333333; /* Define a cor de fundo da coluna */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
-    padding: 15px 20px; /* Adiciona padding interno à coluna */
+    width: 45%; /* Ajusta a largura para caber melhor */
+    background: #333333;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+    padding: 1.25rem; /* Ajusta o padding interno */
+    margin-bottom: 1.25rem; /* Adiciona espaço entre as colunas */
 }
 
 /* Itens do resumo */
 .resume-item {
-    position: relative; /* Define o posicionamento para os ícones de conexão */
-    padding-left: 40px; /* Espaço à esquerda para os ícones de conexão */
-    margin-bottom: 20px; /* Espaço entre os itens */
-    font-size: 1.6rem; /* Define o tamanho da fonte */
-    line-height: 1.6; /* Define o espaçamento entre linhas */
-    color: #ffffff; /* Define a cor do texto */
-    text-align: start; /* Alinha o texto à esquerda */
+    position: relative;
+    padding-left: 1.875rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: start;
 }
-
-
 
 /* Subtítulo da seção de tecnologias */
 .technologies-title {
@@ -367,32 +374,31 @@ section {
 
 /* Estilo para o ícone principal de seções */
 .resume-icon {
-    width: 80px; /* Define o tamanho do ícone */
+    width: 5rem;
     height: auto;
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-    vertical-align: middle; /* Alinha o ícone verticalmente ao centro do texto */
+    margin-right: 0.625rem;
+    vertical-align: middle;
 }
 
 /* Estilo específico para imagens de cursos ao lado do título */
 .course-header {
-    display: flex; /* Alinha o ícone e o texto lado a lado */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    margin-bottom: 10px; /* Espaço entre o cabeçalho e o conteúdo do curso */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem; /* Espaço entre o cabeçalho e o conteúdo do curso */
 }
 
 .course-icon {
-    width: 80px; /* Define o tamanho da imagem do curso */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-    vertical-align: middle; /* Alinha o ícone ao centro do texto */
+    width: 5rem; /* Ajusta o tamanho da imagem do curso */
+    height: auto;
+    margin-right: 0.625rem;
+    vertical-align: middle;
 }
 
 /* Estilo para a imagem de tecnologias */
 .technologies-image {
-    width: 100%; /* Ocupa toda a largura disponível */
-   text-align: center;
-    margin-top: 2px; /* Espaço acima da imagem */
-    
+    width: 100%;
+    text-align: center;
+    margin-top: 0.125rem;
 }
 
 .resume-subtitle {
@@ -400,80 +406,170 @@ section {
     font-size: 1.8rem;
 }
 
-
 /* Linha separadora menor entre cursos */
 .course-separator {
     width: 95%; /* Define a largura da linha menor */
-    height: 2px; /* Define a espessura da linha */
+    height: 0.125rem; /* Define a espessura da linha */
     background-color: #f4f6f8; /* Define a cor da linha */
-    margin: 20px auto; /* Centraliza a linha e adiciona espaçamento acima e abaixo */
-    border-radius: 1px; /* Bordas arredondadas para um efeito suave */
+    margin: 1.25rem auto; /* Centraliza a linha e adiciona espaçamento acima e abaixo */
+    border-radius: 0.0625rem; /* Bordas arredondadas para um efeito suave */
 }
 
-/* Espaçamento e estilo geral da seção */
-.resume-section {
-    padding: 350px 0px 0px 210px;
-}
+/* Portoflio */
 
-/* Título das seções */
-.resume-title {
+h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 0px;
-    border-bottom: 2px solid #f4f6f8;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
 }
 
-/* Conteúdo da seção de resumo */
-.resume-content {
-    display: flex;
-    gap: 15px;
-    flex-wrap: nowrap;
+
+ /*! Portifolio */
+
+ #portfolio {
+    padding: 5rem 15rem 0rem 15rem; /* Adicionando padding nas laterais e inferior */
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Permite que a seção se expanda conforme necessário */
+    overflow: visible; /* Permite que a seção expanda */
+    margin-bottom: 0; /* Remover a margem inferior */
 }
 
-/* Colunas de resumo */
-.resume-column {
-    width: 45%;
-    background: #333333;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 15px 20px;
+.title-container {
+    margin-bottom: 5rem; /* Espaço abaixo do título e descrição */
+    color: #ffffff; /* Cor do texto do título */
+    font-size: 2rem; /* Tamanho da fonte do título */
 }
 
-/* Itens do resumo */
-.resume-item {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 20px;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    color: #ffffff;
-    text-align: start;
+.portfolio-grid {
+    display: grid; /* Usar grid para layout */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 2rem; /* Espaço entre os itens */
 }
 
-/* Estilos adicionais omitidos para clareza... */
-
-.technologies-image {
-    width: 100%;
-    text-align: center;
-    margin-top: 2px;
+figure {
+    margin: 0; /* Remove a margem do figure */
+    border: 1px solid #ccc; /* Borda do figure */
+    border-radius: 5px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que o conteúdo não transborde */
+    transition: transform 0.3s; /* Transição suave para efeito de zoom */
 }
 
-.resume-subtitle {
-    text-align: center;
-    font-size: 2rem;
+figure:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
-h5 {
-    text-align: center;
+img {
+    width: 100%; /* A imagem ocupará toda a largura do figure */
+    height: auto; /* Mantém a proporção da imagem */
 }
+
+figure a {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+figcaption {
+    padding: 10px; /* Espaçamento interno do figcaption */
+    background-color: #323232; /* Cor de fundo do figcaption */
+    color: #ccc; /* Cor do texto do figcaption */
+    font-size: 1.5rem; /* Tamanho da fonte do figcaption */
+}
+
+
+/*! Contato */
+
+#contact {
+    padding: 5rem 20rem; /* Espaçamento nas laterais e no topo e na parte inferior */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20rem; /* Espaço abaixo da seção */
+    display: block;
+}
+
+.title-container {
+    margin-bottom: 3rem; /* Espaço abaixo do título e descrição */
+    display: block; /* Garante que o contêiner tenha o comportamento de bloco */
+    font-size: 2em;
+}
+
+.contact-content {
+    display: flex; /* Utiliza flex para organizar o aside e o formulário lado a lado */
+    justify-content: space-between; /* Espaça os elementos ao longo do eixo principal */
+    margin-top: 3rem; /* Espaço acima do conteúdo */
+}
+
+aside.contact-info {
+    flex: 0 0 30%; /* Define uma largura fixa para o aside */
+    margin-right: 2rem; /* Espaço à direita do aside */
+    background-color: #333; /* Cor de fundo para o aside */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    text-align: left; /* Alinha o texto à esquerda */
+    color: white;
+    font-size: 1.2rem;
+}
+
+form {
+    flex: 1; /* Permite que o formulário ocupe espaço disponível */
+    text-align: left; /* Alinha o texto dos campos à esquerda */
+}
+
+.form-group {
+    margin-bottom: 2rem; /* Espaço entre os campos do formulário */
+}
+
+label {
+    display: block; /* Faz com que o label ocupe a largura total */
+    margin-bottom: 0.5rem; /* Espaço abaixo do label */
+    color: white;
+}
+
+input, textarea {
+    width: 100%; /* Campos ocupam toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+button {
+    margin: 1rem auto 0; /* Margem acima e abaixo do botão; margens laterais automáticas para centralizar */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #323232; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.button-container {
+    text-align: center; /* Centraliza o botão dentro deste contêiner */
+    width: 100%; /* Garante que o contêiner use a largura total disponível */
+}
+
+
 
 /*! Responsividade */
+/*? Para telas grandes como 1600px para menos*/
+@media (max-width: 1600px) {
+    .resume-content {
+        flex-direction: column; /* Muda para coluna quando a tela for menor que 1600px */
+        align-items: center; /* Centraliza as colunas */
+    }
+
+    .resume-column {
+        width: 90%; /* Aumenta a largura das colunas para se ajustarem melhor */
+    }
+
+   
+}
+
 
 /*? Para telas grandes como 1440px ou mais */
 @media (min-width: 1440px) {
@@ -492,6 +588,8 @@ h5 {
     }
     
 }
+
+
 
 /*? Para telas entre 768px e 1024px */
 @media (max-width: 1024px) {
@@ -568,6 +666,7 @@ h5 {
         grid-template-columns: 1fr; /* Apenas uma coluna */
     }
     
+
 }
 
 /*?  Para telas menores (768px ou menos) */
