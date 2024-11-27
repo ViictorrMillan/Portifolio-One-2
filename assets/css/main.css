@@ -475,7 +475,7 @@ figcaption {
     color: #ccc; /* Cor do texto do figcaption */
     font-size: 1.5rem; /* Tamanho da fonte do figcaption */
 }
-
+ 
 
 /*! Contato */
 
@@ -498,16 +498,6 @@ figcaption {
     margin-top: 3rem; /* Espaço acima do conteúdo */
 }
 
-aside.contact-info {
-    flex: 0 0 30%; /* Define uma largura fixa para o aside */
-    margin-right: 2rem; /* Espaço à direita do aside */
-    background-color: #333; /* Cor de fundo para o aside */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 5px; /* Cantos arredondados */
-    text-align: left; /* Alinha o texto à esquerda */
-    color: white;
-    font-size: 1.2rem;
-}
 
 form {
     flex: 1; /* Permite que o formulário ocupe espaço disponível */
@@ -552,6 +542,76 @@ button:hover {
     text-align: center; /* Centraliza o botão dentro deste contêiner */
     width: 100%; /* Garante que o contêiner use a largura total disponível */
 }
+
+
+/* Estilo geral do aside */
+aside.contact-info {
+    margin-right: 3rem; /* Espaço à direita */
+    color: white; /* Cor do texto */
+    font-size: 1rem; /* Tamanho do texto */
+    max-width: 450px; /* Largura máxima */
+}
+
+/* Estilo do cabeçalho */
+.contact-info h3 {
+    font-size: 30px; /* Tamanho maior para destaque */
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    color: #ffffff; /* Cor branca */
+    text-align: center; /* Alinha o título ao centro */
+    margin-top: 0; /* Remove a margem superior */
+}
+
+/* Lista sem marcadores */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px; /* Espaço vertical entre itens */
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+
+}
+
+/* Estilo dos itens da lista */
+.contact-info li {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente ícone e texto */
+    gap: 10px; /* Espaço horizontal entre ícone e texto */
+    font-size: 1.6rem; /* Tamanho do texto */
+    color: #f0f0f0; /* Cor clara */
+}
+
+/* Estilo dos ícones */
+.contact-info i {
+    font-size: 2rem; /* Tamanho maior para ícones */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    color: inherit; /* Herda a cor do texto */
+}
+.contact-info a {
+    color: #f0f0f0; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: flex; /* Flexbox para alinhar o ícone e o texto */
+    align-items: center; /* Alinha o ícone e o texto no centro */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+.contact-info a:hover {
+    color: #10ffff86; /* Cor do texto ao passar o mouse */
+}
+
+/* Espaçamento entre as informações */
+.contact-info li span {
+    display: inline-block; /* Para ajustar o texto sem quebrar */
+    word-wrap: break-word; /* Quebra texto em dispositivos pequenos */
+}
+
+
+
+
+
+
+
 
 
 
