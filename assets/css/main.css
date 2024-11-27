@@ -51,7 +51,6 @@ section {
 
 }
 
-
 .nav-dots ul li a {
     display: flex;
     justify-content: center;
@@ -63,10 +62,12 @@ section {
     transition: all 0.3s ease;
     text-decoration: none;
     overflow: hidden;
+
 }
 
 .nav-dots ul li a i {
     transition: transform 0.3s ease;
+
 }
 
 /** Texto da seção que aparece ao passar o mouse */
@@ -81,6 +82,7 @@ section {
     white-space: nowrap;
     opacity: 0;
     transition: all 0.3s ease;
+
 
 }
 
@@ -100,7 +102,7 @@ section {
 
 .nav-dots ul li a:hover::after {
     opacity: 1;
-    left: 50px; /* Espaço entre o ícone e o texto */
+    left: 50px;
 
 }
 
@@ -126,6 +128,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0px
+
 }
 
 /** Contêiner de texto */
@@ -134,6 +137,7 @@ section {
     text-align: center;
     padding-left: 6.8rem;
     max-width: 100%;
+
 }
 
 .text-container h1 {
@@ -144,11 +148,13 @@ section {
 
 .text-container p {
     margin-top: 10px;
+
 }
 
 /** Texto animado */
 #dynamic-subtitle {
     white-space: pre-wrap; /* Permite quebra de linha quando necessário */
+
 }
 
 /** Cursor que pisca */
@@ -157,6 +163,7 @@ section {
     font-size: 1.5rem;
     margin-left: 5px;
     animation: blink 0.7s infinite;
+
 }
 
 /** Animação do cursor */
@@ -164,6 +171,7 @@ section {
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
+
 }
 
 /** Contêiner de imagem */
@@ -173,6 +181,7 @@ section {
     flex-direction: column;
     align-items: center;
     padding: 0 2rem;
+
 }
 
 /** Estilo da imagem */
@@ -182,22 +191,26 @@ section {
     height: auto;
     border-radius: 50%;
     margin-bottom: 0px;
+
 }
 
 .social-icons {
     display: flex;
     justify-content: center; 
     margin-top: 20px; 
+
 }
 
 .social-icon {
     margin: 0 15px; /* Espaçamento entre os ícones */
     transition: color 0.3s; /* Efeito de transição ao passar o mouse */
+
 }
 
 /** Parágrafo abaixo da imagem */
 .image-description {
     text-align: justify;
+
 }
 
 /*! About  */
@@ -214,15 +227,7 @@ section {
     text-align: center;
 }
 
-.section-title h2 {
-    font-size: 5rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-
 .section-title p {
-    font-size: 2rem;
-    color: #f3f3f3;
     margin-top: -10px;
 }
   
@@ -263,10 +268,7 @@ section {
 
 /* Estilo do título, centralizado no topo */
 .col-right h3 {
-    font-size: 2.5vw;
-    font-weight: 600;
     text-align: center;
-    color: #ffffff;
     margin-top: 0;
     margin-bottom: 0.8rem;
     flex-shrink: 0; /* Evita que o título encolha */
@@ -274,9 +276,7 @@ section {
 
 /* Estilo do parágrafo */
 .col-right p {
-    font-size: 1.2vw;
     line-height: 1.8;
-    color: #f3f3f3;
     margin-bottom: 1.5rem;
     flex-grow: 1; /* Faz com que o parágrafo cresça para preencher o espaço */
 }
@@ -292,8 +292,6 @@ section {
 }
 
 .col-right ul li {
-    font-size: 1.2vw;
-    color: #ffffff;
     margin-bottom: 5px;
     display: flex;
     align-items: center;
@@ -307,11 +305,8 @@ section {
 }
 
 .col-right ul li span {
-    font-weight: bold;
-    color: #f3f3f3;
     margin-right: 5px;
 }
-
 
 
 /*! Resume */
@@ -329,11 +324,7 @@ section {
 
 /* Título das seções */
 .resume-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
     text-align: center;
-    border-bottom: 0.125rem solid #f4f6f8;
     padding-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
@@ -350,7 +341,6 @@ section {
 /* Colunas de resumo */
 .resume-column {
     width: 45%; /* Ajusta a largura para caber melhor */
-    background: #333333;
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
     padding: 1.25rem; /* Ajusta o padding interno */
@@ -361,9 +351,6 @@ section {
 .resume-item {
     position: relative;
     padding-left: 1.875rem;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: #ffffff;
     text-align: start;
 }
 
@@ -403,30 +390,22 @@ section {
 
 .resume-subtitle {
     text-align: center;
-    font-size: 1.8rem;
 }
 
 /* Linha separadora menor entre cursos */
 .course-separator {
     width: 95%; /* Define a largura da linha menor */
     height: 0.125rem; /* Define a espessura da linha */
-    background-color: #f4f6f8; /* Define a cor da linha */
     margin: 1.25rem auto; /* Centraliza a linha e adiciona espaçamento acima e abaixo */
     border-radius: 0.0625rem; /* Bordas arredondadas para um efeito suave */
 }
 
-/* Portoflio */
+/*! Portoflio */
 
-h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
+h2 { /* Tambem usei no titulo de contato CRIAR UMA CLASSE PARA CADA */
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
-
- /*! Portifolio */
 
  #portfolio {
     padding: 5rem 15rem 0rem 15rem; /* Adicionando padding nas laterais e inferior */
@@ -438,8 +417,6 @@ h2 {
 
 .title-container {
     margin-bottom: 5rem; /* Espaço abaixo do título e descrição */
-    color: #ffffff; /* Cor do texto do título */
-    font-size: 2rem; /* Tamanho da fonte do título */
 }
 
 .portfolio-grid {
@@ -450,11 +427,10 @@ h2 {
 
 figure {
     margin: 0; /* Remove a margem do figure */
-    border: 1px solid #ccc; /* Borda do figure */
     border-radius: 5px; /* Cantos arredondados */
     overflow: hidden; /* Garante que o conteúdo não transborde */
     transition: transform 0.3s; /* Transição suave para efeito de zoom */
-}
+} 
 
 figure:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
@@ -471,9 +447,6 @@ figure a {
 
 figcaption {
     padding: 10px; /* Espaçamento interno do figcaption */
-    background-color: #323232; /* Cor de fundo do figcaption */
-    color: #ccc; /* Cor do texto do figcaption */
-    font-size: 1.5rem; /* Tamanho da fonte do figcaption */
 }
  
 
@@ -489,7 +462,6 @@ figcaption {
 .title-container {
     margin-bottom: 3rem; /* Espaço abaixo do título e descrição */
     display: block; /* Garante que o contêiner tenha o comportamento de bloco */
-    font-size: 2em;
 }
 
 .contact-content {
@@ -511,15 +483,11 @@ form {
 label {
     display: block; /* Faz com que o label ocupe a largura total */
     margin-bottom: 0.5rem; /* Espaço abaixo do label */
-    color: white;
 }
 
 input, textarea {
     width: 100%; /* Campos ocupam toda a largura */
     padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda dos campos */
-    border-radius: 5px; /* Cantos arredondados */
-    font-size: 1rem; /* Tamanho da fonte */
 }
 
 button {
@@ -527,17 +495,11 @@ button {
     padding: 10px 20px; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Cantos arredondados */
-    background-color: #323232; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte do botão */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 
 }
 
-button:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
-}
 .button-container {
     text-align: center; /* Centraliza o botão dentro deste contêiner */
     width: 100%; /* Garante que o contêiner use a largura total disponível */
@@ -547,16 +509,12 @@ button:hover {
 /* Estilo geral do aside */
 aside.contact-info {
     margin-right: 3rem; /* Espaço à direita */
-    color: white; /* Cor do texto */
-    font-size: 1rem; /* Tamanho do texto */
     max-width: 450px; /* Largura máxima */
 }
 
 /* Estilo do cabeçalho */
 .contact-info h3 {
-    font-size: 30px; /* Tamanho maior para destaque */
     margin-bottom: 25px; /* Espaço abaixo do título */
-    color: #ffffff; /* Cor branca */
     text-align: center; /* Alinha o título ao centro */
     margin-top: 0; /* Remove a margem superior */
 }
@@ -577,28 +535,20 @@ aside.contact-info {
     display: flex;
     align-items: center; /* Centraliza verticalmente ícone e texto */
     gap: 10px; /* Espaço horizontal entre ícone e texto */
-    font-size: 1.6rem; /* Tamanho do texto */
-    color: #f0f0f0; /* Cor clara */
 }
 
 /* Estilo dos ícones */
 .contact-info i {
-    font-size: 2rem; /* Tamanho maior para ícones */
     margin-right: 10px; /* Espaço entre o ícone e o texto */
-    color: inherit; /* Herda a cor do texto */
 }
+
 .contact-info a {
-    color: #f0f0f0; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado */
     display: flex; /* Flexbox para alinhar o ícone e o texto */
     align-items: center; /* Alinha o ícone e o texto no centro */
-    font-size: 1.2rem; /* Tamanho da fonte */
     transition: color 0.3s ease; /* Suaviza a transição de cor */
 }
 
-.contact-info a:hover {
-    color: #10ffff86; /* Cor do texto ao passar o mouse */
-}
 
 /* Espaçamento entre as informações */
 .contact-info li span {

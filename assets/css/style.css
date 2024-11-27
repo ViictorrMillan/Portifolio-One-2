@@ -4,16 +4,19 @@
     /* Cores */
     --cor-primaria: #333;
     --cor-secundaria: #10ffff86;
+    --cor-terciaria : #323232;
     --cor-fundo: linear-gradient(135deg, #323232 10%, #000000 30%, #323232 40%, #000000 70%, #323232 80%, #000000 100%);
     --cor-texto: white;
+    --cor-texto-2: #f3f3f3;
     --cor-icone: rgb(165, 165, 165);
     --cor-hover: #555;
     --cor-active: var(--cor-secundaria);
+    --cor-borda: #ccc;
+    
 
 
 /*? Fontes */
     --fonte-principal: 'Montserrat', Arial, sans-serif;
-
     --fonte-tamanho-grande: 3.5rem;
     --fonte-tamanho-medio: 1.5rem;
     --fonte-tamanho-pequeno: 1.2rem;
@@ -76,19 +79,164 @@ body {
     color: var(--cor-hover);
 
 }
+
 .social-icon:hover {
     color: var(--cor-secundaria); /* Cor ao passar o mouse */
 }
+
 .image-description {
     font-size: var(--fonte-tamanho-pequeno);
     color: var(--cor-texto);
 }
 
+/*! About  */
+
+.section-title h2 {
+    color: var(--cor-texto);
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.section-title p {
+    color: var(--cor-texto-2);
+    font-size: 2rem;
+
+}
+
+.col-right h3 {
+    color: var(--cor-texto);
+    font-size: 2.5vw;
+    font-weight: 600;
+
+}
+
+.col-right p {
+    color: var(--cor-texto-2);
+    font-size: 1.2vw;
+}
+
+.col-right ul li {
+    color: var(--cor-texto);
+    font-size: 1.2vw;
+}
+
+.col-right ul li span {
+    color: var(--cor-texto-2);
+    font-weight: bold;
+}
 
 
 
+/*! Resume */
 
-/*!  Classes Especiais */
+.resume-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    border-bottom: 0.125rem solid var(--cor-texto-2);
+}
+
+.resume-column {
+    background: var(--cor-primaria);
+}
+
+.resume-item {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+}
+
+.resume-subtitle {
+    font-size: 1.8rem;
+}
+
+.course-separator {
+    background-color: var(--cor-texto-2); /* Define a cor da linha TIRAR E COLOCAR A CLASSE IGUAL DAS OUTRAS */
+}
+
+/*! Portoflio */
+
+h2 { /* Tambem usei no titulo de contato CRIAR UMA CLASSE PARA CADA */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cor-texto-2);                               
+}
+
+.title-container {
+    color: var(--cor-texto); /* Cor do texto do título */
+    font-size: 2rem; /* Tamanho da fonte do título */
+}
+
+figure {
+    border: 1px solid var(--cor-borda); /* Borda do figure */
+}
+
+figcaption {
+    background-color: var(--cor-terciaria); /* Cor de fundo do figcaption */
+    color: var(--cor-texto-2); /* Cor do texto do figcaption */
+    font-size: 1.5rem; /* Tamanho da fonte do figcaption */
+}
+
+
+/*! Contato */
+
+.title-container {
+    font-size: 2em;
+
+}
+
+label {
+    color: var(--cor-texto);
+}
+
+input, textarea {
+    border: 1px solid var(--cor-borda); /* Borda dos campos */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+button {
+    background-color: var(--cor-terciaria); /* Cor de fundo do botão */
+    color: var(--cor-texto); /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte do botão */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
+}
+
+aside.contact-info {
+    color: var(--cor-texto); /* Cor do texto */
+    font-size: 1rem; /* Tamanho do texto */
+ 
+}
+
+.contact-info h3 {
+    font-size: 30px; /* Tamanho maior para destaque */
+    color: var(--cor-texto); /* Cor branca */
+}
+
+.contact-info li {
+    font-size: 1.6rem; /* Tamanho do texto */
+    color: var(--cor-texto); /* Cor clara */
+}
+
+.contact-info i {
+    font-size: 2rem; /* Tamanho maior para ícones */
+    color: inherit; /* Herda a cor do texto */
+}
+
+.contact-info a {
+    color: var(--cor-texto-2); /* Cor do texto */
+    font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+.contact-info a:hover {
+    color: var(--cor-secundaria); /* Cor do texto ao passar o mouse */
+}
+
+
+
 
 
 /*! Responsividade */
