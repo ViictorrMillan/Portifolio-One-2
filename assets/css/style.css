@@ -3,7 +3,7 @@
 :root {
     /* Cores */
     --cor-primaria: #333;
-    --cor-secundaria: #10ffff86;
+    --cor-secundaria: #c199d8d3;
     --cor-terciaria : #323232;
     --cor-fundo: linear-gradient(135deg, #323232 10%, #000000 30%, #323232 40%, #000000 70%, #323232 80%, #000000 100%);
     --cor-texto: white;
@@ -20,6 +20,8 @@
     --fonte-tamanho-grande: 3.5rem;
     --fonte-tamanho-medio: 1.5rem;
     --fonte-tamanho-pequeno: 1.2rem;
+    --fonte-subtitulo: 2rem;
+    --fonte-legenda: 1.8rem;
 }
 
 body {
@@ -85,7 +87,7 @@ body {
 }
 
 .image-description {
-    font-size: var(--fonte-tamanho-pequeno);
+    font-size: var(--fonte-legenda);
     color: var(--cor-texto);
 }
 
@@ -99,7 +101,7 @@ body {
 
 .section-title p {
     color: var(--cor-texto-2);
-    font-size: 2rem;
+    font-size: var(--fonte-subtitulo);
 
 }
 
@@ -112,7 +114,7 @@ body {
 
 .col-right p {
     color: var(--cor-texto-2);
-    font-size: 1.2vw;
+    font-size: var(--fonte-legenda);
 }
 
 .col-right ul li {
@@ -129,30 +131,107 @@ body {
 
 /*! Resume */
 
+#resume .resume-block {
+    background-color: var(--cor-primaria); /* Fundo claro */
+    color: var(--cor-texto);
+}
+
+.section-title h2 {
+    font-size: var(--fonte-tamanho-grande);
+}
 .resume-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--cor-texto);
-    border-bottom: 0.125rem solid var(--cor-texto-2);
+    font-size: 2rem; /* Tamanho da fonte */
+    border-bottom: 2px solid var(--cor-borda);
 }
-
-.resume-column {
-    background: var(--cor-primaria);
-}
-
-.resume-item {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: var(--cor-texto);
-}
-
 .resume-subtitle {
-    font-size: 1.8rem;
+    font-weight: 650; /* Tamanho da fonte */
+}    
+
+.resume-subtitle-title {
+    font-size: var(--fonte-tamanho-medio); /* Tamanho da fonte */
 }
 
-.course-separator {
-    background-color: var(--cor-texto-2); /* Define a cor da linha TIRAR E COLOCAR A CLASSE IGUAL DAS OUTRAS */
+.resume-description {
+    font-size: var(--fonte-tamanho-pequeno); /* Tamanho da fonte */
+    font-weight: 500;
 }
+
+.resume-list {
+    font-size: var(--fonte-tamanho-pequeno);
+}
+
+.resume-list li {
+    list-style: none; /* Remove o marcador padrão */
+}
+.resume-list li::before {
+    content: "➞"; 
+    color: var(--cor-secundaria); 
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+}
+
+.resume-list li em {
+    color: var(--cor-secundaria); /* Cor para destacar */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.course-header-text {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--cor-texto); /* Cor do texto */
+}
+
+.resume-list-two-columns li {
+    font-size: var(--fonte-tamanho-pequeno);
+    
+}
+.resume-list li span:hover {
+    background-color: var(--cor-secundaria)  ; /* Cor de fundo quando o mouse passar */
+    border-radius: 5px; /* Cantos arredondados */
+    color: rgb(255, 255, 255); /* Muda a cor do texto */
+    padding: 2px 4px;
+}
+
+.resume-list li span:hover em {
+    color: var(--cor-texto-2); /* Altere a cor para o que preferir */
+}
+
+.resume-list li:hover::before {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}
+
+.resume-list-two-columns li {
+    font-size: var(--fonte-tamanho-pequeno);
+}
+
+.resume-list li a {
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    color: inherit; /* Herda a cor original do texto */
+}
+
+.resume-list li a:hover {
+    background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Cantos arredondados */
+    color: rgb(255, 255, 255); /* Cor do texto ao passar o mouse */
+    cursor: pointer; /* Mostra o cursor interativo */
+    padding: 2px 4px;
+    display: inline-block; /* Garante que o link tenha padding aplicado corretamente */
+    text-decoration: none;
+}
+
+.resume-list li a:hover em {
+    color: var(--cor-texto-2); /* Altera a cor de textos em <em> ao passar o mouse */
+}
+
+.resume-list li:hover::before {
+    transform: scale(1.2); /* Mantém o efeito de aumento do ícone ao passar o mouse */
+}
+
+.resume-subtitle-date i {
+    margin-right: 5px;
+    color: var(--cor-secundaria);
+}
+
 
 /*! Portoflio */
 
@@ -233,54 +312,5 @@ aside.contact-info {
 
 .contact-info a:hover {
     color: var(--cor-secundaria); /* Cor do texto ao passar o mouse */
-}
-
-
-
-
-
-/*! Responsividade */
-
-@media (max-width: 1024px) {
-    .text-container h1 {
-        font-size: var(--fonte-tamanho-grande);
-    }
-
-    .text-container p {
-        font-size: var(--fonte-tamanho-medio);
-    }
-
-}
-
-
-@media (max-width: 768px) {
-    
-    .nav-dots {
-        background-color: var(--cor-primaria);
-    }
-
-    .nav-dots ul li a {
-        background-color: var(--cor-primaria);
-        font-size: 20px;
-        color: var(--cor-texto);
-    }
-
-    .nav-dots ul li a:hover {
-        background-color: var(--cor-hover);
-        color: var(--cor-texto);
-    }
-
-    .nav-dots ul li a.active {
-        background-color: var(--cor-active);
-        color: var( --cor-texto);
-    }
-}
-
-@media (max-width: 600px) {
-    /*!  presentation */
-      .image-description {
-       font-size: 1.1rem;
-    
-    }
 }
 

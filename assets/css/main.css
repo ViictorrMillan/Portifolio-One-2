@@ -24,6 +24,7 @@ section {
     margin-bottom: 0rem; /* Ajuste o valor conforme necessário */
 }
 
+
 /*TODO Nav */
 
 .nav-dots {
@@ -213,6 +214,9 @@ section {
 
 }
 
+
+
+
 /*! About  */
 
 .about-section {
@@ -258,12 +262,12 @@ section {
 .col-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribui o espaço verticalmente */
     flex: 2;
-    max-width: 800px;
+    max-width: 750px;
     text-align: justify;
     padding: 0 4rem;
-    height: 100%; /* Garante que ocupe toda a altura da imagem */
+    height: 100%; 
+    align-self: center;
 }
 
 /* Estilo do título, centralizado no topo */
@@ -276,129 +280,159 @@ section {
 
 /* Estilo do parágrafo */
 .col-right p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    flex-grow: 1; /* Faz com que o parágrafo cresça para preencher o espaço */
+    line-height: 1.4; 
+    text-indent: 25px;
+    margin-top: 0;
 }
 
-/* Organizando a lista de informações em colunas */
-.col-right ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin-top: 2rem;
+.section-subtitle {
+    padding:20px 0px;
 }
-
-.col-right ul li {
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-/* Email ocupa o final e as duas colunas */
-.col-right ul li:nth-child(5) {
-    grid-column: span 2; /* Ocupa as duas colunas */
-    margin-top: auto; /* Garante que o email fique no final */
-}
-
-.col-right ul li span {
-    margin-right: 5px;
-}
-
 
 /*! Resume */
-
-#Resume {
-    margin-top: 10rem;
-    max-height: 100vh;
+#resume {
+    margin-bottom: 10rem;
 }
 
-/* Espaçamento e estilo geral da seção */
-.resume-section {
-    padding: 22rem 15rem 25rem; /* Mantém o padding nas laterais */
-    /* Adiciona espaço acima para evitar sobreposição */
+.container-resume {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 65px;
+
 }
 
-/* Título das seções */
+.section-title h2 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: -0.5px;
+}
+
+#resume .resume-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 15px; /* Espaço entre os blocos */
+    align-items: stretch;
+}
+
+#resume .resume-block {
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 5px 10px 0px 10px; /* Aumenta o espaço interno */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 660px;
+    min-height: 300px; /* Aumenta a altura mínima */
+    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+#resume .resume-block:hover {
+    transform: scale(1.05); /* Zoom leve ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
 .resume-title {
     text-align: center;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
+    margin-top: -0.2rem;
+
 }
 
-/* Conteúdo da seção de resumo */
-.resume-content {
-    display: flex;
-    gap: 2rem; /* Aumenta o espaço entre as colunas */
-    flex-wrap: wrap; /* Permite que as colunas se movam em telas menores */
-    justify-content: center; /* Centraliza as colunas horizontalmente */
+.technologies-image {
+    width: 100%;
+    text-align: center;
+    
 }
 
-/* Colunas de resumo */
-.resume-column {
-    width: 45%; /* Ajusta a largura para caber melhor */
-    border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
-    padding: 1.25rem; /* Ajusta o padding interno */
-    margin-bottom: 1.25rem; /* Adiciona espaço entre as colunas */
-}
-
-/* Itens do resumo */
 .resume-item {
     position: relative;
     padding-left: 1.875rem;
     text-align: start;
 }
 
-/* Subtítulo da seção de tecnologias */
-.technologies-title {
-    text-align: center; /* Centraliza o subtítulo */
+.resume-subtitle {
+    text-align: center;
+    margin-top: -1rem;
+}
+.resume-subtitle-title {
+    margin-bottom: 4px; /* Espaço entre o título e o próximo elemento */
 }
 
-/* Estilo para o ícone principal de seções */
-.resume-icon {
-    width: 5rem;
-    height: auto;
-    margin-right: 0.625rem;
-    vertical-align: middle;
+.resume-subtitle-date {
+    margin-top: 2px; /* Espaço entre o elemento acima */
 }
 
-/* Estilo específico para imagens de cursos ao lado do título */
+.resume-description {
+    text-align: justify;
+    text-indent: 5px;
+    text-align: center;   padding: 10px 2px;
+}
+.resume-list li {
+    position: relative;
+    margin-bottom: 10px; 
+    padding-left: 30px;
+}
+
+.resume-list li::before {
+    position: absolute;
+    left: 0;
+}
+
 .course-header {
     display: flex;
     align-items: center;
-    margin-bottom: 0.625rem; /* Espaço entre o cabeçalho e o conteúdo do curso */
+    justify-content: center;
+    margin-bottom: -20px;
+    margin-right: 60px ;
+    margin-top: -20px;
 }
-
+.course-header-text {
+    margin-left: 10px;
+    flex-grow: 1;
+}
 .course-icon {
     width: 5rem; /* Ajusta o tamanho da imagem do curso */
     height: auto;
-    margin-right: 0.625rem;
-    vertical-align: middle;
 }
 
-/* Estilo para a imagem de tecnologias */
-.technologies-image {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.125rem;
+.resume-item-alignment {
+    margin-bottom: 40px;
 }
 
-.resume-subtitle {
-    text-align: center;
+
+.resume-list-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Divide em duas colunas */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 0;  /* Remove o preenchimento */
+    list-style-type: none; /* Remove os marcadores */
 }
 
-/* Linha separadora menor entre cursos */
-.course-separator {
-    width: 95%; /* Define a largura da linha menor */
-    height: 0.125rem; /* Define a espessura da linha */
-    margin: 1.25rem auto; /* Centraliza a linha e adiciona espaçamento acima e abaixo */
-    border-radius: 0.0625rem; /* Bordas arredondadas para um efeito suave */
+
+/* Estilo para as listas */
+.resume-list li span {
+    display: inline-block; /* Faz com que o fundo fique apenas ao redor do texto */ /* Adiciona espaçamento ao redor do texto */
+    transition: background-color 0.5s ease; /* Efeito suave para transição de cor */
 }
+
+.resume-list a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto original */
+    display: inline; /* Garante que o link se comporte como texto normal */
+}
+
+.resume-list a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.resume-title a {
+    text-decoration: none;  
+    color: inherit;         
+}
+
+
+
+
 
 /*! Portoflio */
 
@@ -556,335 +590,26 @@ aside.contact-info {
     word-wrap: break-word; /* Quebra texto em dispositivos pequenos */
 }
 
-
-
-
-
-
-
-
-
-
-/*! Responsividade */
-/*? Para telas grandes como 1600px para menos*/
-@media (max-width: 1600px) {
-    .resume-content {
-        flex-direction: column; /* Muda para coluna quando a tela for menor que 1600px */
-        align-items: center; /* Centraliza as colunas */
-    }
-
-    .resume-column {
-        width: 90%; /* Aumenta a largura das colunas para se ajustarem melhor */
-    }
-
-   
-}
-
-
-/*? Para telas grandes como 1440px ou mais */
-@media (min-width: 1440px) {
-    .nav-dots {
-        left: 2.5rem;
-    }
-
-    .text-container {
-        margin-right: 6rem;
-        padding-left: 0.5rem;
-    }
-    
-    
-    .image-container {
-        margin-left: 9rem;
-    }
-    
-}
-
-
-
-/*? Para telas entre 768px e 1024px */
-@media (max-width: 1024px) {
-    .presentation {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .text-container {
-        text-align: center;
-        padding-left: 0;
-    }
-
-    .image-container {
-        padding: 0;
-    }
-
-    .profile-image {
-        max-width: 25rem;
-    }
-
-    .text-container {
-        padding-left: 50px;
-        margin-right: 0px;
-        margin-left: 0px;
-    }
-
-    #dynamic-subtitle {
-        
-        min-height: 30px; /
-    }
-
-    .image-description {
-        padding-left: 12rem;
-        padding-right: 12rem; 
-    }
-    
-    .social-icons {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    /*! About */
-    .about-section {
-        margin-top: 20rem; /* Adicionando mais espaço no topo */
-        padding: 2rem; /* Adicionando padding lateral */
-        text-align: center; /* Centralizando em telas menores */
-    }
-
-    .about-content {
-        flex-direction: column; /* Empilha imagem e texto */
-        align-items: center;
-        text-align: center;
-    }
-
-    .col-left, .col-right {
-        max-width: 100%; /* Ocupa toda a largura disponível */
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    .profile-pic {
-        width: 60%; /* Reduzindo o tamanho da imagem */
-        margin-left: 0;
-        margin-bottom: 2rem;
-    }
-
-    .col-right {
-        padding: 0 2rem; /* Adicionando mais espaço nas laterais do texto */
-    }
-
-    .col-right ul {
-        grid-template-columns: 1fr; /* Apenas uma coluna */
-    }
-    
-
-}
-
-/*?  Para telas menores (768px ou menos) */
-@media (max-width: 768px) {
-    .nav-dots {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        left: 0;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    .nav-dots ul {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap; 
-    }
-
-    .nav-dots ul li {
-        margin: 0 10px; /* Reduz a margem entre os itens */
-    }
-
-    /** Estilo para a bolinha sempre expandida */
-    .nav-dots ul li a {
-        width: 8rem; /* Largura fixa para evitar desconfiguração */
-        height: 20px; /* Altura fixa para os itens */
-        border-radius: 30px; 
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        padding: 12px; /* Ajusta o espaçamento interno */
-        text-decoration: none;
-        position: relative;
-        transition: none; /* Remove todas as transições de hover */
-        overflow: hidden; /* Garante que o texto não extrapole o espaço */
-        margin-bottom: 2px; /* Espaço entre os itens */
-    }
-
-    /** Texto visível sempre */
-    .nav-dots ul li a::after {
-        content: attr(data-section);
-        position: relative;
-        left: 0px; /* Espaço entre o ícone e o texto */
-        background-color: transparent;
-        opacity: 1;
-        display: inline-block;
-        white-space: nowrap; 
-
-    }
-
-    /** Hover sem mudar o layout */
-    .nav-dots ul li a:hover {
-        padding-left: 0px;
-        width: 8rem; /* Remove qualquer expansão */
-        justify-content: center; /* Mantém o alinhamento do ícone e texto */
-
-    }
-
-    .nav-dots ul li a:hover i {
-        transform: none; /*! Desabilita a escala do ícone */
-    }
-
-    .nav-dots ul li a:hover::after {
-        opacity: 1;
-        left: 0px; 
-    }
-
-    /** Preencher o ícone quando estiver ativo */
-    .nav-dots ul li a.active {
-        padding-left: 0;
-    }
-    
-    .presentation {
-        margin-top: 2rem;
-    }
-
-    .profile-image {
-        max-width: 20rem;
-    }
-
-    .image-description {
-        padding-left: 8rem;
-        padding-right: 8rem; 
-    }
-
-    /*! About */
-
-     .about-section {
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
-
-    .section-title h2 {
-        font-size: 3rem;
-    }
-
-    .section-title p {
-        font-size: 2rem;
-    }
-
-    .col-left {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .profile-pic {
-        margin-left: 0;
-    }
-
-    .col-right {
-        max-width: 100%;
-    }
-
-    .col-right h3 {
-        font-size: 2rem;
-    }
-
-}
-
-/*? Para telas menores (600px ou menos) */
-@media (max-width: 600px) {
-    /*! Apresentação */
-    .presentation {
-        margin-top: 8rem;
-    }
-
-    .image-description {
-        padding-left: 2rem;
-        padding-right: 2rem; 
-    }
-
-    /*! Seção Sobre */
-    .about-section {
-        margin-left: 1rem; /* Reduz as margens laterais para evitar que o conteúdo "quebre" */
-        margin-right: 1rem;
-    }
-
-    .section-title h2 {
-        font-size: 2.5rem; /* Diminui o tamanho do título */
-        margin: 0 1rem; /* Ajusta as margens do título para telas pequenas */
-    }
-
-    .section-title p {
-        font-size: 1.3rem; /* Ajusta o subtítulo */
-        margin: 1rem 2rem; /* Reduz as margens laterais do subtítulo */
-    }
-
-    .col-left {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .profile-pic {
-        margin: 0 auto; /* Centraliza a imagem */
-        width: 80%; /* Ajusta o tamanho da imagem para ficar proporcional */
-    }
-
-    .col-right {
-        max-width: 100%;
-    }
-
-    .col-right h3 {
-        font-size: 1.8rem; /* Ajusta o tamanho do texto do título */
-    }
-    
-    .col-right p {
-        font-size: 1rem; /* Diminui o tamanho do texto abaixo de "Victor Millan" */
-        line-height: 1.4; /* Ajuste o espaçamento entre as linhas */
-        margin: 0 1rem; /* Reduz as margens laterais para evitar quebras */
-    }
-    
-    .col-right ul li {
-        font-size: 1rem; /* Diminui o tamanho do texto da lista */
-        margin: 0 1rem; /* Ajusta margens para alinhamento e evitar quebras */
-    }
-}
-
-/*?  Para telas menores (320px ou menos) */
-/* Para telas muito pequenas (320px ou menos) */
-@media (max-width: 320px) {
-    .presentation {
-        margin-top: 18rem; /* Ajusta o espaçamento */
-    }
-
-    .about-section {
-        margin-left: 0.3rem;
-        margin-right: 0.3rem;
-    }
-
-    .section-title h2 {
-        font-size: 1.8rem; /* Reduz o tamanho do título */
-    }
-
-    .section-title p {
-        font-size: 1rem; /* Reduz o subtítulo */
-    }
-
-    .col-right p, 
-    .col-right ul li {
-        font-size: 0.8rem; /* Diminui ainda mais o tamanho do texto */
-    }
-
-    .profile-pic {
-        width: 70%; /* Diminui o tamanho da imagem para caber melhor */
-    }
-}
+/* Footer */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: -330px;
+  }
+  .footer .social-icons {
+    margin: 0.5em 0;
+  }
+  .footer .social-icons a {
+    margin: 0 0.5em;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em; /* Aumentei um pouco o tamanho para melhorar a visibilidade */
+  }
+  .footer .social-icons a:hover {
+    color: var(--cor-secundaria); 
+  }
+  
+  
