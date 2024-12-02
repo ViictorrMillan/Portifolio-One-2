@@ -314,3 +314,30 @@ aside.contact-info {
     color: var(--cor-secundaria); /* Cor do texto ao passar o mouse */
 }
 
+
+
+
+/*! Media Style */
+
+
+@media (max-width: 1371px) {
+    .presentation {
+       
+    }
+    .text-container {
+       
+    }
+    .image-container {
+        padding: 0 1rem; /* Ajuste suave do padding */
+        display: flex; /* Certifique-se de que a imagem está centralizada */
+        justify-content: center; /* Centraliza a imagem dentro do contêiner */
+    }
+    .profile-image {
+        max-width: 18rem; /* Reduz a imagem para não ultrapassar o layout */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .image-description {
+      font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,850 @@
+/*TODO Nav */
+@media (max-width: 768px) {
+    .nav-dots {
+        position: fixed;
+        top: 20px; /* Mover para o topo da tela */
+        left: 50%;
+        transform: translateX(-50%); /* Centralizar horizontalmente */
+        background-color: transparent;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    /* Ajustando a lista para ser horizontal e centralizada */
+    .nav-dots ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row; /* De coluna para linha */
+        justify-content: center; /* Centraliza as bolinhas */
+    }
+
+    .nav-dots ul li {
+        margin: 0 15px; /* Adiciona margem entre as bolinhas */
+    }
+
+    .nav-dots ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: relative;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+    .nav-dots ul li a i {
+        transition: transform 0.3s ease;
+    }
+
+    /* Texto da seção que aparece ao passar o mouse */
+    .nav-dots ul li a::after {
+        content: attr(data-section);
+        position: absolute;
+        left: 80px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        padding-left: 12px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Animação ao passar o mouse */
+    .nav-dots ul li a:hover {
+        width: 9rem;
+        border-radius: 30px;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .nav-dots ul li a:hover i {
+        transform: scale(1.2);
+    }
+
+    .nav-dots ul li a:hover::after {
+        opacity: 1;
+        left: 50px;
+    }
+}
+/* Para telas maiores que 768px, mantendo as bolinhas no lado */
+@media (min-width: 769px) {
+    .nav-dots {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .nav-dots ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Mantém a coluna em telas maiores */
+    }
+
+    .nav-dots ul li {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav-dots {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .nav-dots ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap; /* Permite a quebra das bolinhas para a linha seguinte */
+    }
+
+    .nav-dots ul li {
+        margin: 5px; /* Ajusta o espaço entre as bolinhas */
+    }
+
+    .nav-dots ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px; /* Tamanho reduzido da bolinha */
+        height: 45px; /* Tamanho reduzido da bolinha */
+        border-radius: 50%;
+        position: relative;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+    .nav-dots ul li a i {
+        font-size: 1rem; /* Tamanho reduzido do ícone */
+        transition: transform 0.3s ease;
+    }
+
+    /* Texto da seção que aparece ao passar o mouse */
+    .nav-dots ul li a::after {
+        content: attr(data-section);
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        padding-left: 12px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all 0.3s ease;
+        max-width: 80px; /* Limita a largura do texto */
+        word-wrap: break-word; /* Quebra o texto caso seja muito longo */
+    }
+
+    /* Animação ao passar o mouse */
+    .nav-dots ul li a:hover {
+        width: 7rem;
+        border-radius: 30px;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .nav-dots ul li a:hover i {
+        transform: scale(1.2);
+    }
+
+    .nav-dots ul li a:hover::after {
+        opacity: 1;
+        left: 35px; 
+        font-size: 1rem; /* Tamanho do texto reduzido */
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-dots ul li a {
+        width: 35px; /* Bolinha ainda menor */
+        height: 35px; /* Bolinha ainda menor */
+    }
+
+    .nav-dots ul li a i {
+        font-size: 0.8rem; /* Ícone menor */
+    }
+
+    .nav-dots ul li a:hover {
+        width: 6rem; /* Reduzir a largura ao passar o mouse */
+    }
+
+    .nav-dots ul li a:hover i {
+        transform: scale(1.1); /* Ícone um pouco menor ao passar o mouse */
+    }
+
+    .nav-dots ul li a:hover::after {
+        font-size: 0.9rem; /* Reduzir o tamanho do texto no hover */
+        left: 30px; /* Ajusta a posição do texto */
+    }
+}
+
+
+/* Todo Home */
+
+/* Media Query para telas abaixo de 1440px */
+@media (max-width: 1440px) {
+    #home {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; /* Ajusta o texto para ficar centralizado */
+    }
+
+    /* Container principal .presentation */
+    .presentation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1100px; /* Reduz a largura máxima */
+        margin: 0 auto;
+        padding: 0 2rem; /* Adiciona padding lateral */
+    }
+
+    /* Contêiner de texto */
+    .text-container {
+        flex: 1;
+        text-align: center;
+        padding-left: 8rem; /* Reduz o padding esquerdo */
+        padding-right: 5rem; /* Adiciona padding direito */
+        max-width: 100%;
+    }
+
+    /* Título */
+    .text-container h1 {
+        font-size: 3rem; /* Ajusta o tamanho do título */
+        margin: 0;
+    }
+
+    /* Parágrafo do texto */
+    .text-container p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* Contêiner de imagem */
+    .image-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    /* Estilo da imagem */
+    .profile-image {
+        max-width: 22rem; /* Reduz a largura máxima da imagem */
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 10px; /* Adiciona margem inferior */
+    }
+
+    /* Descrição abaixo da imagem */
+    .image-description {
+        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+        line-height: 1.6;
+        padding: 0 2rem;
+        text-align: justify;
+    }
+
+    /* Estilo dos ícones sociais */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        margin: 0 12px; /* Reduz a margem entre os ícones */
+        transition: color 0.3s;
+    }
+}
+
+/* Responsividade adicional para telas pequenas, abaixo de 1024px */
+@media (max-width: 1024px) {
+    .presentation {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        justify-content: center;
+        padding: 1rem; /* Ajuste no padding */
+    }
+
+    .text-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .profile-image {
+        max-width: 18rem; /* Reduz a imagem para telas menores */
+    }
+
+    /* Ajustar a descrição da imagem para quebrar linha */
+    .image-description {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+        line-height: 1.5; /* Ajusta o espaçamento das linhas */
+        padding: 0 2rem;
+        text-align: justify;
+        word-wrap: break-word; /* Faz com que o texto quebre para a linha de baixo */
+    }
+}
+
+/* Responsividade para telas ainda menores, como 425px ou menores */
+@media (max-width: 425px) {
+    #home {
+       /* Permite que o conteúdo se ajuste melhor */
+        padding: 1rem; /* Adiciona padding lateral */
+    }
+
+    .presentation {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        padding: 0.5rem; /* Reduz o padding */
+    }
+
+    .text-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .text-container h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .text-container p {
+        font-size: 1rem; /* Reduz o tamanho do parágrafo */
+    }
+
+    .profile-image {
+        max-width: 15rem; /* Reduz a imagem */
+    }
+
+    .image-description {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+        line-height: 1.4;
+        padding: 0 1rem; /* Ajuste no padding */
+    }
+    
+    #dynamic-subtitle {
+        font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
+    }
+   
+}
+
+
+
+
+/*! Sobre */
+
+/* Media Query para telas muito grandes (acima de 1600px) */
+@media (max-width: 1600px) {
+    .about-section {
+        padding: 0;
+        margin-top: 6rem; /* Reduz a margem superior */
+
+        margin-bottom: 100px; /* Ajusta a margem inferior */
+    }
+
+    .section-title h2 {
+        font-size: 3.5rem; /* Ajusta o tamanho do título */
+    }
+
+    .section-title p {
+        font-size: 1.5rem; /* Ajusta o subtítulo */
+        margin-top: -8px; /* Ajusta a margem superior */
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-top: 1.5rem;
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 25rem; /* Reduz o tamanho máximo da coluna esquerda */
+        margin-right: 2rem;
+    }
+
+    .profile-pic {
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Ajusta o sombreamento */
+        object-fit: cover;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 700px; /* Ajusta o máximo da coluna direita */
+        text-align: justify;
+        padding: 0 3rem; /* Reduz o padding lateral */
+        height: 100%;
+        align-self: center;
+    }
+
+    .col-right h3 {
+        text-align: center;
+        font-size: 2.5rem; /* Ajusta o tamanho do título */
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .col-right p {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte para os parágrafos */
+        line-height: 1.5;
+        text-indent: 30px;
+        margin-top: 0;
+    }
+
+    .section-subtitle {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 1440px) {
+    .about-section {
+        padding: 0;
+        margin-top: 6rem; /* Ajusta a margem superior */
+        margin-left: 15rem; /* Garantir um espaço fixo de 15rem para o nav lateral */
+        margin-right: 10rem; /* Ajusta a margem direita para dar mais espaço */
+        margin-bottom: 120px; /* Ajusta a margem inferior */
+    }
+
+    .section-title h2 {
+        font-size: 3rem; /* Ajusta o tamanho do título */
+    }
+
+    .section-title p {
+        font-size: 1.6rem; /* Ajusta o subtítulo */
+        margin-top: 8px; /* Ajusta a margem superior */
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-top: 2rem;
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 30rem; /* Ajusta a largura máxima da coluna esquerda */
+        margin-right: 1rem;
+    }
+
+    .profile-pic {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 750px; /* Ajusta a largura máxima da coluna direita */
+        text-align: justify;
+        padding: 0 1rem;
+        height: 100%;
+        align-self: center;
+    }
+
+    .col-right h3 {
+        text-align: center;
+        font-size: 2.5rem; /* Ajusta o tamanho do título */
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .col-right p {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte para os parágrafos */
+        line-height: 1.5;
+        text-indent: 30px;
+        margin-top: 0;
+    }
+
+    .section-subtitle {
+        padding: 20px 0;
+    }
+}
+
+/* Media Query para telas de 1024px */
+@media (max-width: 1400px) {
+    .about-section {
+        padding: 0;
+        margin-top: 6rem;
+        margin-left: 12rem; /* Espaço suficiente para o nav */
+        margin-right: 10rem;
+        margin-bottom: 120px;
+    }
+
+    .section-title h2 {
+        font-size: 2.8rem;
+    }
+
+    .section-title p {
+        font-size: 1.6rem;
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-top: 2rem;
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 15rem; /* Tamanho ajustado para a imagem ficar menor */
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: stretch; /* Alinha a imagem e o texto verticalmente */
+    }
+
+    .profile-pic {
+        width: 100%; /* Ajusta a largura da imagem para ocupar o espaço disponível */
+        height: auto; /* Ajusta a altura proporcionalmente */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 750px;
+    }
+}
+
+
+@media (max-width: 950px) {
+    .about-section {
+        padding: 0;
+        margin-top: 6rem;
+        margin-left: 15rem; /* Espaço suficiente para o nav */
+        margin-right: 10rem;
+        margin-bottom: 120px;
+    }
+
+    .section-title h2 {
+        font-size: 2.8rem;
+    }
+
+    .section-title p {
+        font-size: 1.4rem;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column; /* Mudando a direção para coluna */
+        align-items: flex-start; /* Alinha o conteúdo ao topo (ou à esquerda) */
+        margin-top: 2rem;
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 80%; /* Imagem ocupa até 80% da largura disponível */
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto; /* Garantir que a imagem fique centralizada */
+        margin-right: auto;
+    }
+
+    .profile-pic {
+        width: 100%; /* A imagem vai ocupar toda a largura da coluna */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 90%; /* Texto ocupa até 90% da largura disponível */
+        text-align: left; /* Alinhando o texto à esquerda */
+        padding: 0 1.5rem;
+        height: auto;
+        align-self: flex-start; /* Garante que o texto comece alinhado ao topo */
+    }
+
+    .col-right h3 {
+        text-align: left; /* Alinhando o título à esquerda */
+        font-size: 2rem; /* Reduzido para melhor visualização em telas menores */
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .col-right p {
+        font-size: 1.2rem; /* Ajustado para uma leitura confortável */
+        line-height: 1.4;
+        text-indent: 30px;
+        margin-top: 0;
+    }
+
+    /* Garantindo que as colunas se ajustem bem em telas menores */
+    .about-content .col-left,
+    .about-content .col-right {
+        width: 100%; /* Ambos ocupam 100% da largura */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 0;
+        margin-top: 5rem; /* Menos margem superior para telas pequenas */
+        margin-left: 12rem; /* Menos margem à esquerda para otimizar o espaço */
+        margin-right: 3rem; /* Menos margem à direita */
+        margin-bottom: 100px;
+    }
+
+    .section-title h2 {
+        font-size: 2.4rem; /* Reduzindo o título para telas pequenas */
+    }
+
+    .section-title p {
+        font-size: 1.4rem; /* Menor para um melhor ajuste */
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column; /* Mudando para coluna */
+        align-items: center; /* Centraliza o conteúdo */
+        margin-top: 2rem;
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 70%; /* Reduzindo a largura da imagem */
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-pic {
+        width: 100%; /* A imagem vai ocupar toda a largura da coluna */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 100%; /* Texto ocupa toda a largura disponível */
+        text-align: left;
+        padding: 0 1rem; /* Menos padding nas laterais */
+        height: auto;
+        align-self: flex-start;
+    }
+
+    .col-right h3 {
+        text-align: left;
+        font-size: 1.8rem; /* Reduzido para melhor visualização */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .col-right p {
+        font-size: 1.2rem; /* Fonte menor para texto em telas pequenas */
+        line-height: 1.5;
+        text-indent: 20px;
+        margin-top: 0;
+    }
+
+    /* Garantindo que as colunas se ajustem bem em telas menores */
+    .about-content .col-left,
+    .about-content .col-right {
+        width: 100%; /* Ambos ocupam 100% da largura */
+    }
+}
+
+/* Ajustes para telas abaixo de 768px */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 0;
+        margin-top: 5rem; /* Menos margem superior */
+        margin-left: 1rem; /* Margem esquerda reduzida */
+        margin-right: 1rem; /* Margem direita reduzida */
+        margin-bottom: 80px; /* Menos margem inferior */
+    }
+
+    .section-title h2 {
+        font-size: 2.2rem; /* Tamanho menor para telas menores */
+    }
+
+    .section-title p {
+        font-size: 1.3rem; /* Ajuste no tamanho da descrição */
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column; /* Colocando tudo em coluna */
+        align-items: center; /* Centralizando */
+        margin-top: 2rem;
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 75%; /* Imagem ocupando 75% da largura */
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-pic {
+        width: 100%; /* A imagem vai ocupar toda a largura da coluna */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 100%;
+        text-align: left;
+        padding: 0 1rem; /* Ajuste no padding */
+        height: auto;
+        align-self: flex-start;
+    }
+
+    .col-right h3 {
+        text-align: left;
+        font-size: 1.7rem; /* Fonte ajustada */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .col-right p {
+        font-size: 1.1rem; /* Reduzindo o tamanho da fonte para mais conforto */
+        line-height: 1.4;
+        text-indent: 20px;
+        margin-top: 0;
+    }
+
+    /* Garantindo que as colunas se ajustem bem */
+    .about-content .col-left,
+    .about-content .col-right {
+        width: 100%;
+    }
+}
+
+/* Ajustes para telas de 480px ou menores (smartphones em retrato) */
+@media (max-width: 480px) {
+    .about-section {
+        margin-top: 4rem; /* Menos margem superior */
+        margin-left: 0.5rem; /* Menos margem à esquerda */
+        margin-right: 0.5rem; /* Menos margem à direita */
+        margin-bottom: 60px; /* Menos margem inferior */
+    }
+
+    .section-title h2 {
+        font-size: 2rem; /* Fonte ainda menor */
+    }
+
+    .section-title p {
+        font-size: 1.2rem; /* Ajustando para uma tela bem pequena */
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza o conteúdo */
+        margin-top: 1.5rem; /* Menos margem superior */
+    }
+
+    .col-left {
+        flex: 1;
+        max-width: 85%; /* Imagem ocupando 85% da largura */
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+    }
+
+    .col-right {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 100%;
+        text-align: left;
+        padding: 0 0.5rem; /* Padding ainda menor */
+        height: auto;
+        align-self: flex-start;
+    }
+
+    .col-right h3 {
+        text-align: left;
+        font-size: 1.6rem; /* Fonte um pouco menor */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .col-right p {
+        font-size: 1rem; /* Fonte bem menor para dispositivos pequenos */
+        line-height: 1.4;
+        text-indent: 15px; /* Menos indentação */
+        margin-top: 0;
+    }
+
+    /* Garantindo que as colunas ocupem 100% da largura */
+    .about-content .col-left,
+    .about-content .col-right {
+        width: 100%;
+    }
+}
