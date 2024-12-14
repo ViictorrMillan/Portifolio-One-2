@@ -3,7 +3,7 @@
 :root {
     /* Cores */
     --cor-primaria: #333;
-    --cor-secundaria: #c199d8d3;
+    --cor-secundaria: #C0C0C0;
     --cor-terciaria : #323232;
     --cor-fundo: linear-gradient(135deg, #323232 10%, #000000 30%, #323232 40%, #000000 70%, #323232 80%, #000000 100%);
     --cor-texto: white;
@@ -37,7 +37,6 @@ body {
 }
 
 .nav-dots ul li a::after {
-    color: var(--cor-texto);
     font-size: 20px;
 }
 
@@ -47,7 +46,22 @@ body {
 
 .nav-dots ul li a.active {
     background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
 }
+
+.nav-dots a:hover i {
+    color: var(--cor-primaria); /* Altere para a cor desejada */
+}
+
+
+/* Estilo do texto ao passar o mouse (hover) */
+.nav-dots ul li a:hover::after,
+.nav-dots ul li a:focus::after {
+    color: var(--cor-primaria); /* Define a cor do texto ao passar o mouse */
+    font-size: 1.2rem; /* Tamanho do texto */
+ 
+}
+
 
 /*TODO Home  */
 
@@ -176,6 +190,10 @@ body {
     font-weight: bold; /* Deixa o texto em negrito */
 }
 
+.resume-list li em:hover {
+    color: var(--cor-primaria); /* Cor para destacar */
+
+}
 .course-header-text {
     font-size: 1.5rem; /* Tamanho da fonte */
     color: var(--cor-texto); /* Cor do texto */
@@ -188,12 +206,12 @@ body {
 .resume-list li span:hover {
     background-color: var(--cor-secundaria)  ; /* Cor de fundo quando o mouse passar */
     border-radius: 5px; /* Cantos arredondados */
-    color: rgb(255, 255, 255); /* Muda a cor do texto */
+    color:  var(--cor-primaria); /* Muda a cor do texto */
     padding: 2px 4px;
 }
 
 .resume-list li span:hover em {
-    color: var(--cor-texto-2); /* Altere a cor para o que preferir */
+    color: var(--cor-primaria); /* Altere a cor para o que preferir */
 }
 
 .resume-list li:hover::before {
@@ -212,7 +230,7 @@ body {
 .resume-list li a:hover {
     background-color: var(--cor-secundaria); /* Cor de fundo ao passar o mouse */
     border-radius: 5px; /* Cantos arredondados */
-    color: rgb(255, 255, 255); /* Cor do texto ao passar o mouse */
+    color: var(--cor-primaria); /* Cor do texto ao passar o mouse */
     cursor: pointer; /* Mostra o cursor interativo */
     padding: 2px 4px;
     display: inline-block; /* Garante que o link tenha padding aplicado corretamente */
@@ -235,7 +253,7 @@ body {
 
 /*! Portoflio */
 
-h2 { /* Tambem usei no titulo de contato CRIAR UMA CLASSE PARA CADA */
+h2 { 
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--cor-texto-2);                               
@@ -317,27 +335,3 @@ aside.contact-info {
 
 
 
-/*! Media Style */
-
-
-@media (max-width: 1371px) {
-    .presentation {
-       
-    }
-    .text-container {
-       
-    }
-    .image-container {
-        padding: 0 1rem; /* Ajuste suave do padding */
-        display: flex; /* Certifique-se de que a imagem está centralizada */
-        justify-content: center; /* Centraliza a imagem dentro do contêiner */
-    }
-    .profile-image {
-        max-width: 18rem; /* Reduz a imagem para não ultrapassar o layout */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-
-    .image-description {
-      font-size: 1.5rem;
-    }
-}

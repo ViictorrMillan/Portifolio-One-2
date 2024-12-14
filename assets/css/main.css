@@ -416,12 +416,14 @@ section {
 .resume-list li span {
     display: inline-block; /* Faz com que o fundo fique apenas ao redor do texto */ /* Adiciona espaçamento ao redor do texto */
     transition: background-color 0.5s ease; /* Efeito suave para transição de cor */
+    font-size: 1.2rem;
 }
 
 .resume-list a {
     text-decoration: none; /* Remove sublinhado dos links */
     color: inherit; /* Herda a cor do texto original */
     display: inline; /* Garante que o link se comporte como texto normal */
+    font-size: 1rem;
 }
 
 .resume-list a:hover {
@@ -438,54 +440,53 @@ section {
 
 
 /*! Portoflio */
-
-h2 { /* Tambem usei no titulo de contato CRIAR UMA CLASSE PARA CADA */
+h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
- #portfolio {
-    padding: 5rem 15rem 0rem 15rem; /* Adicionando padding nas laterais e inferior */
-    text-align: center; /* Centraliza o texto */
-    display: block; /* Permite que a seção se expanda conforme necessário */
-    overflow: visible; /* Permite que a seção expanda */
-    margin-bottom: 0; /* Remover a margem inferior */
+#portfolio {
+    padding: 5rem 15rem 15rem 15rem; /* Padding maior nas laterais e inferior */
+    text-align: center;
+    display: block;
+    overflow: visible;
+    margin-bottom: 0;
 }
 
 .title-container {
-    margin-bottom: 5rem; /* Espaço abaixo do título e descrição */
+    margin-bottom: 5rem;
 }
 
 .portfolio-grid {
-    display: grid; /* Usar grid para layout */
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    gap: 2rem; /* Espaço entre os itens */
+    gap: 2rem;
 }
 
 figure {
-    margin: 0; /* Remove a margem do figure */
-    border-radius: 5px; /* Cantos arredondados */
-    overflow: hidden; /* Garante que o conteúdo não transborde */
-    transition: transform 0.3s; /* Transição suave para efeito de zoom */
-} 
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
 
 figure:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 img {
-    width: 100%; /* A imagem ocupará toda a largura do figure */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
 }
 
 figure a {
-    text-decoration: none; /* Remove o sublinhado do link */
+    text-decoration: none;
 }
 
 figcaption {
-    padding: 10px; /* Espaçamento interno do figcaption */
+    padding: 10px;
 }
- 
+
 
 /*! Contato */
 
@@ -536,6 +537,15 @@ button {
     transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 
 }
+
+form input, form textarea {
+    width: 100%; /* Assegura que os campos ocupem toda a largura disponível */
+    padding: 12px 24px; /* Ajuste do tamanho do botão */
+    font-size: 1.1rem; /* Aumenta um pouco o tamanho da fonte do botão */
+}
+
+
+
 
 .button-container {
     text-align: center; /* Centraliza o botão dentro deste contêiner */
@@ -615,4 +625,13 @@ aside.contact-info {
     color: var(--cor-secundaria); 
   }
   
-  
+  footer {
+    position: absolute; /* O footer será posicionado de forma absoluta em relação ao body */
+    bottom: 0; /* Fica no fundo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Faz o footer ocupar toda a largura da página */
+    background-color: #333; /* Cor de fundo do footer */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem; /* Padding do footer */
+}

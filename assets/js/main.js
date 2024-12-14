@@ -8,11 +8,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetSection = document.querySelector(targetId); // Seleciona pela ID
 
         if (targetSection) { // Verifica se a seção existe
+            // Encontra o título da seção
+            const sectionTitle = targetSection.querySelector('.section-title');
+            const scrollTarget = sectionTitle ? sectionTitle : targetSection; // Usa o título se disponível
+
             // Calcula a altura do cabeçalho
             const header = document.querySelector('header'); // Altere isso para o seletor do seu cabeçalho
             const headerHeight = header ? header.offsetHeight : 0; // Verifica se o cabeçalho existe
 
-            const topPosition = targetSection.offsetTop - headerHeight; // Calcula a posição superior da seção menos a altura do cabeçalho
+            // Define deslocamento baseado no tamanho da tela
+            const isMobile = window.innerWidth <= 480; // Definição para dispositivos móveis
+            let offset = isMobile ? 20 : 50; // Deslocamento padrão
+
+            // Ajuste personalizado para as seções específicas
+            if (targetId === "#resume" || targetId === "#about") {
+                if (isMobile) {
+                    offset += 50; // Deslocamento maior em telas menores
+                } else if (targetId === "#resume") {
+                    // Centraliza o conteúdo da seção 'resume' em telas maiores
+                    const sectionHeight = targetSection.offsetHeight;
+                    const viewportHeight = window.innerHeight;
+                    offset = -(viewportHeight / 2 - sectionHeight / 2 - headerHeight);
+                } else {
+                    offset += 70; // Ajuste extra para 'about' em telas maiores
+                }
+            }
+
+            // Calcula a posição ajustada
+            const topPosition = scrollTarget.offsetTop - headerHeight - offset;
 
             // Faz a rolagem suave para a posição calculada
             window.scrollTo({
@@ -23,8 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Destaque da secao atual 
-
+// Destaque da seção atual
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
     const navDots = document.querySelectorAll('.nav-dots ul li a');
@@ -33,10 +55,28 @@ document.addEventListener('DOMContentLoaded', function () {
         let current = '';
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+            const sectionTitle = section.querySelector('.section-title');
+            const sectionTop = sectionTitle ? sectionTitle.offsetTop : section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            // Ajuste para considerar a altura do cabeçalho e centralização
+            const header = document.querySelector('header');
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            // Define deslocamento dinâmico
+            const isMobile = window.innerWidth <= 480;
+            let offset = isMobile ? 20 : 50;
+
+            // Ajuste personalizado para as seções específicas
+            if (current === "resume" || current === "about") {
+                if (isMobile) {
+                    offset += 50;
+                } else {
+                    offset += 70; // Ajuste extra para telas maiores
+                }
+            }
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3 - headerHeight - offset) {
                 current = section.getAttribute('id');
             }
         });

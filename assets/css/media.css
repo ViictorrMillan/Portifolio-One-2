@@ -212,6 +212,7 @@
         align-items: center;
         justify-content: center;
         text-align: center; /* Ajusta o texto para ficar centralizado */
+        padding-top: 5rem;
     }
 
     /* Container principal .presentation */
@@ -266,11 +267,14 @@
 
     /* Descrição abaixo da imagem */
     .image-description {
-        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
-        line-height: 1.6;
-        padding: 0 2rem;
-        text-align: justify;
+        font-size: 1.2rem; /* Define um tamanho de fonte confortável */
+        line-height: 1.4; /* Adiciona espaçamento entre linhas para melhorar a legibilidade */
+        text-align: left; /* Alinha o texto à esquerda */
+        word-spacing: 0.06em; /* Adiciona um pequeno espaçamento extra entre palavras */
     }
+    
+    
+    
 
     /* Estilo dos ícones sociais */
     .social-icons {
@@ -313,7 +317,8 @@
 }
 
 /* Responsividade para telas ainda menores, como 425px ou menores */
-@media (max-width: 425px) {
+@media (max-width: 500px) {
+ 
     #home {
        /* Permite que o conteúdo se ajuste melhor */
         padding: 1rem; /* Adiciona padding lateral */
@@ -342,15 +347,22 @@
     }
 
     .image-description {
-        font-size: 0.9rem; /* Reduz o tamanho do texto */
+        font-size: 1rem; /* Reduz o tamanho do texto */
         line-height: 1.4;
-        padding: 0 1rem; /* Ajuste no padding */
+        text-align: left;
     }
     
     #dynamic-subtitle {
         font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
     }
    
+    .image-description {
+        padding: 0 2rem;
+        text-align: justify; /* Justifica o texto */
+        text-justify: inter-word; /* Evita espaçamentos desnecessários */
+        hyphens: auto; /* Habilita hifenização para evitar grandes espaços */
+    }
+    
 }
 
 
@@ -368,6 +380,7 @@
     }
 
     .section-title h2 {
+        margin-bottom: 2px;
         font-size: 3.5rem; /* Ajusta o tamanho do título */
     }
 
@@ -763,7 +776,7 @@
     }
 
     .col-right p {
-        font-size: 1.1rem; /* Reduzindo o tamanho da fonte para mais conforto */
+        font-size: 1.2rem; /* Reduzindo o tamanho da fonte para mais conforto */
         line-height: 1.4;
         text-indent: 20px;
         margin-top: 0;
@@ -847,4 +860,343 @@
     .about-content .col-right {
         width: 100%;
     }
+}
+
+
+/*? Seção Resumo   */
+ 
+
+@media (max-width: 1700px) {
+    .resume-grid {
+       margin-left: 5rem; /* Ajusta o padding à esquerda */
+    }
+
+    #resume .resume-block {
+        padding: 5px 10px 0px 10px; /* Aumenta o espaço interno */
+        width: 35rem;
+        min-height: 300px; /* Aumenta a altura mínima */  
+    }
+
+    .resume-title {
+        margin-top: -0.2rem;
+        font-size: 2rem;
+    
+    }
+    
+    .resume-item {
+        padding-left: 1.875rem;
+    }
+    
+    .resume-subtitle-title {
+        margin-bottom: 2px; /* Espaço entre o título e o próximo elemento */
+        font-size: 1.5rem;
+    }
+
+    .resume-description {   
+        padding: 0.1rem;
+    }
+    .resume-list li {
+        margin-bottom: 0.5rem; 
+        padding-left: 1.875rem;
+    }
+    
+    .course-header {
+        margin-bottom: -1rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+    }
+    .course-header-text {
+        margin-left: 1rem;
+    }
+    
+    .resume-item-alignment {
+        margin-bottom: 1.8rem;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .resume-grid {
+        margin-left: 0rem; /* Ajusta o padding à esquerda */
+     }
+ 
+    
+    #resume {
+        margin-top: 20rem;
+    }
+    
+    #resume .resume-grid {
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 20px;
+    }
+
+    .resume-block {
+        width: 100%;
+        min-height: 200px;
+        padding: 15px;
+    }
+
+    
+
+}
+
+/* Estilo para telas menores que tablet (até 768px) */
+@media (max-width: 768px) {
+    #resume {
+        margin-top: 30rem;
+        margin-bottom: 20rem;
+    }
+   
+    #resume .resume-grid {
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 15px;
+    }
+
+    .resume-block {
+        width: 100%;
+        min-height: 200px;
+        padding: 10px;
+    }
+
+}
+
+/* Estilo para telas de celular (até 480px) */
+@media (max-width: 480px) {
+    #resume {
+        margin-top: 1000px;
+        margin-bottom: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #resume .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    #resume .resume-block {
+        width: 90%;
+        min-height: auto;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .resume-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .resume-description {
+        font-size: 1rem;
+        text-align: left; /* Alinha à esquerda */
+        padding: 10px;
+        line-height: 1.6; /* Espaçamento entre linhas */
+        margin-bottom: 10px; /* Margem inferior para espaçamento */
+    }
+
+    .resume-list {
+        font-size: 0.95rem;
+        padding: 2px;
+        margin: 0 auto;
+        text-align: center; /* Mantém alinhamento à esquerda */
+    }
+
+    .resume-list li {
+        padding-left: 20px;
+        margin-bottom: 0.5rem;
+    }
+
+    .resume-list-two-columns {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 0 auto;
+    }
+
+    .course-header {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .course-header-text {
+        margin: 10px 0;
+    }
+
+    .course-icon {
+        width: 4rem;
+        margin: 0 auto;
+        padding-top: 2px;
+    }
+
+    .resume-item-alignment {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+ 
+/*? Seção Projetos */
+/* Media Queries para tablets e dispositivos grandes (máximo 1024px) */
+@media (max-width: 1024px) {
+    #portfolio {
+        padding: 5rem 10rem 0rem 10rem; /* Reduz o padding nas laterais em tablets */
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+        gap: 1.5rem; /* Menos espaço entre os itens */
+    }
+
+    h2 {
+        font-size: 2rem; /* Ajuste do tamanho da fonte */
+    }
+
+    figcaption {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para dispositivos menores como smartphones (máximo 768px) */
+@media (max-width: 768px) {
+    #portfolio {
+        padding: 5rem 5rem 0rem 5rem; /* Reduz o padding para telas menores */
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Coloca os itens em uma coluna */
+        gap: 1.5rem; /* Espaço entre os itens */
+    }
+
+    h2 {
+        font-size: 1.75rem; /* Tamanho de fonte ajustado para ser legível, mas não muito pequeno */
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
+}
+
+/* Para dispositivos ainda menores (como smartphones em modo retrato) */
+@media (max-width: 480px) {
+    #portfolio {
+        padding: 3rem 3rem 0rem 3rem; /* Ajusta o padding para telas pequenas */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte do título */
+    }
+
+    figcaption {
+        font-size: 0.95rem;
+    }
+
+    .contact-info {
+        margin-top: 2rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%; /* Garante que os campos de entrada ocupem toda a largura */
+    }
+
+    .button-container button {
+        width: 100%; /* Faz o botão ocupar toda a largura em telas pequenas */
+        padding: 1rem; /* Aumenta o tamanho do botão para maior usabilidade */
+    }
+}
+
+
+/*? Seção Contato */
+
+@media (max-width: 1024px) {
+    #contact {
+        padding: 3rem 10rem; /* Ajuste no padding */
+    }
+    
+    .title-container p { 
+        font-size: 1.2rem; /* Ajusta o tamanho do título */
+    }
+    
+
+    .contact-content {
+        flex-direction: column; /* Coloca os elementos em coluna */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 2rem;
+    }
+    
+    aside.contact-info {
+        margin-right: 0;
+        max-width: 100%; /* Permite que o aside ocupe toda a largura */
+    }
+    
+    form {
+        max-width: 100%;
+        text-align: center; /* Centraliza os campos no formulário */
+    }
+    
+    .contact-info ul {
+        gap: 20px; /* Menor espaço entre os itens */
+    }
+}
+
+/* Media query para telas pequenas (até 767px) */
+@media (max-width: 767px) {
+    #contact {
+        padding: 3rem 2rem; /* Ajuste do padding para telas menores */
+        margin-bottom: 45rem;
+        margin-top: 25rem;
+    }
+    
+    .title-container h2 {
+        font-size: 1.8rem; /* Ajusta o tamanho do título */
+    }
+
+    .title-container p { 
+        font-size: 1rem; /* Ajusta o tamanho do título */
+        text-align: left;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.6rem; /* Ajusta o tamanho do subtítulo */
+    }
+    
+    form {
+        max-width: 100%; /* Garante que o formulário ocupe toda a largura */
+        text-align: left;
+    }
+    
+    .contact-info ul {
+        gap: 15px; /* Espaçamento menor entre os itens */
+    }
+    
+    .contact-info li {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+    
+    .contact-info i {
+        font-size: 1.2rem; /* Ajusta o tamanho dos ícones */
+    }
+}
+
+form input, form textarea {
+    width: 100%; /* Assegura que os campos ocupem toda a largura disponível */
+    padding: 10px;
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+}
+
+button {
+    padding: 12px 24px; /* Ajuste do tamanho do botão */
+    font-size: 1.1rem; /* Aumenta um pouco o tamanho da fonte do botão */
+}
+
+.button-container {
+    text-align: center;
 }
