@@ -16,7 +16,7 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 
 Você pode visualizar o portfólio online através do link abaixo:
 
-[Portfólio One - 2](https://vercel.com/viictorrmillans-projects/portifolio-one-2)
+https://portifolio-one-2-kjh4546qh-viictorrmillans-projects.vercel.app
 
 
 ## 🚧 Status do Projeto
