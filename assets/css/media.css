@@ -347,13 +347,13 @@
     }
 
     .image-description {
-        font-size: 1rem; /* Reduz o tamanho do texto */
-        line-height: 1.4;
+        font-size: 1.2rem; /* Reduz o tamanho do texto */
+        line-height: 1.2;
         text-align: left;
     }
     
     #dynamic-subtitle {
-        font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
+        font-size: 1rem; /* Reduz o tamanho do subtítulo */
     }
    
     .image-description {
